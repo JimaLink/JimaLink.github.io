@@ -56,7 +56,7 @@ if (hour < 6) {
 } else if (hour < 22) {
     var hello = "晚上好";
 } else {
-    var hello = "夜深了";
+    var hello = "夜已深";
 }
 
 //获取时间
