@@ -9,7 +9,7 @@
 ### 提示
 >由于 CDN 缓存原因，如果要查看最新缓存效果请按Ctrl+F5
 
-- [JimaLink](https://jimmma-7gdxfnix1befa613-1313834468.tcloudbaseapp.com/)
+- [JimaLink](https://www.jimmma.top/))
 
 ### 各种功能
 
@@ -37,8 +37,10 @@
 ### 感谢
 
 10YTX为我鼓捣网站鼓捣魔怔了
-
-* [10YTX](http://im10ytx.top/))
+* [10YTX](http://im10ytx.top/)
+默绘666
+虽然什么都没干，但是真的谢谢他了
+* [mohui666](https://mohui666.top/)
 
 ### 特别感谢
 
