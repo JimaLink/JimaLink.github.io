@@ -33,6 +33,13 @@
 * [小歪 API](https://api.ixiaowai.cn/)
 * [天气 API](https://www.tianqiapi.com/)
 * [一言hitokoto](https://hitokoto.cn/)
+
+### 感谢
+
+10YTX为我鼓捣网站鼓捣魔怔了
+
+* [10YTX](http://im10ytx.top/))
+
 ### 特别感谢
 
 本站部分内容参考自
