@@ -2,10 +2,11 @@
 <strong><h2>JimaLink</h2></strong>
 起始页
 </p>
+>尚未完成,目前版本为0.1
+
 ### 图片预览
 * [点击预览](https://jimalink.github.io/JimaLink.png)
 
->尚未完成,目前版本为0.1
 
 ### 提示
 >由于 CDN 缓存原因，如果要查看最新缓存效果请按Ctrl+F5
