@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         iziToast.show({
             title: hello,
-            message: '欢迎来到 JimaLink'
+            message: '欢迎来到 Snavigation'
         });
     }, 800);
 
@@ -86,7 +86,7 @@ function time() {
 //获取天气
 //每日限量 100 次
 //请前往 https://www.tianqiapi.com/index/doc?version=v6 申请（免费）
-fetch('https://yiketianqi.com/api?unescape=1&version=v6&appid=43986679&appsecret=TksqGZT7')
+fetch('https://www.tianqiapi.com/api?unescape=1&version=v6&appid=34382179&appsecret=g7EuGnLz')
     .then(response => response.json())
     .then(data => {
         //$('#wea_text').html(data.wea + '&nbsp;' + data.tem_night + '℃' + '&nbsp;~&nbsp;' + data.tem_day + '℃')
@@ -151,16 +151,20 @@ color: rgb(244,167,89);
 var styleContent = `
 color: rgb(30,152,255);
 `
-var title1 = 'JimaLink'
+var title1 = 'Snavigation'
 var title2 = `
-JIMMMALINK
-JimaLink
+ _____ __  __  _______     ____     __
+|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
+  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
+  | | | |\\/| |\\___ \\  \\   /    \\   /  
+ _| |_| |  | |____) |  | |      | |   
+|_____|_|  |_|_____/   |_|      |_|                                                     
 `
 var content = `
-版 本 号：0.1
-更新日期：2022-09-08
+版 本 号：1.1
+更新日期：2022-07-12
 
-jimmma的bilibili:https://space.bilibili.com/352177884?spm_id_from=333.1007.0.0
+Github:  https://github.com/imsyy/Snavigation
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
