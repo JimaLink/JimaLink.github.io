@@ -9,7 +9,7 @@
 ### 提示
 >由于 CDN 缓存原因，如果要查看最新缓存效果请按Ctrl+F5
 
-- [JimaLink](https://www.jimmma.top/))
+- 点击[JimaLink](https://www.jimmma.top/)进入JimaLink
 
 ### 各种功能
 
