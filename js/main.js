@@ -85,7 +85,7 @@ function time() {
 
 //获取天气
 //每日限量 100 次
-//请前往 https://www.tianqiapi.com/index/doc?version=v6 申请（免费）
+//https://www.tianqiapi.com/index/doc?version=v6
 fetch('https://www.tianqiapi.com/api?unescape=1&version=v6&appid=34382179&appsecret=g7EuGnLz')
     .then(response => response.json())
     .then(data => {
