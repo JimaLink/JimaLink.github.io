@@ -2,7 +2,7 @@
 <strong><h2>JimaLink</h2></strong>
 起始页
 </p>
-![JimaLink.png](https://jimalink.github.io/JimaLink.png)
+* [图片预览](https://jimalink.github.io/JimaLink.png)
 
 >尚未完成,目前版本为0.1
 
