@@ -4,7 +4,7 @@
 </p>
 
 
->尚未完成
+>尚未完成,目前版本为0.1
 
 ### 提示
 >由于 CDN 缓存原因，如果要查看最新缓存效果请按Ctrl+F5
@@ -32,14 +32,14 @@
 
 * [小歪 API](https://api.ixiaowai.cn/)
 * [天气 API](https://www.tianqiapi.com/)
-
+* [一言hitokoto](https://hitokoto.cn/)
 ### 特别感谢
 
 本站部分内容参考自
 
 * [青柠起始页](https://limestart.cn/)
 * [sou2](https://github.com/yeetime/sou2/)
-* [Snavigation]([https://snavigation.vercel.app/)
+* [Snavigation](https://snavigation.vercel.app/)
 
 
 <a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue">
