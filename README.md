@@ -22,6 +22,7 @@
 - [x] 网站背景自定义
 - [x] 数据备份及恢复
 - [x] 移动端适配
+- [x] 音乐播放
 
 
 ### 插件提及
@@ -29,7 +30,7 @@
 * [iziToast](https://izitoast.marcelodolza.com/)
 * [Iconfont](https://www.iconfont.cn/)
 * [jQuery](https://jquery.com/)
-
+* [懒耗子音乐播放器]
 ### API
 
 * [小歪 API](https://api.ixiaowai.cn/)
