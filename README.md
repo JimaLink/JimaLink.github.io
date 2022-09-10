@@ -38,13 +38,13 @@
 * [一言hitokoto](https://hitokoto.cn/)
 
 ### 感谢
-* demo姐姐帮我管理JimaMusicPlayer内的音乐库
-* [demo的网易云主页](https://music.163.com/#/user/home?id=556134601)
-* 10YTX为我鼓捣网站鼓捣魔怔了
-* [10YTX](http://im10ytx.top/)
-* 默绘666
+* **demo姐姐帮我管理JimaMusicPlayer内的音乐库
+* **[demo的网易云主页](https://music.163.com/#/user/home?id=556134601)
+* ***10YTX为我鼓捣网站鼓捣魔怔了
+* ***[10YTX](http://im10ytx.top/)
+* *默绘666
   虽然什么都没干，但是真的谢谢他了
-* [mohui666](https://mohui666.top/)
+* *[mohui666](https://mohui666.top/)
 
 ### 特别感谢
 
