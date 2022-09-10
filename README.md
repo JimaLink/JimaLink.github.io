@@ -38,7 +38,8 @@
 * [一言hitokoto](https://hitokoto.cn/)
 
 ### 感谢
-
+* demo姐姐帮我管理JimaMusicPlayer内的音乐库
+* 【demo的网易云主页】(https://music.163.com/#/user/home?id=556134601)
 * 10YTX为我鼓捣网站鼓捣魔怔了
 * [10YTX](http://im10ytx.top/)
 * 默绘666
