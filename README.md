@@ -23,6 +23,8 @@
 - [x] 数据备份及恢复
 - [x] 移动端适配
 - [x] 音乐播放
+- [x] JimaMusicPlayer音乐播客
+
 
 
 ### 插件提及
@@ -36,6 +38,7 @@
 * [小歪 API](https://api.ixiaowai.cn/)
 * [天气 API](https://www.tianqiapi.com/)
 * [一言hitokoto](https://hitokoto.cn/)
+* [懒耗子音乐 API]
 
 ### 感谢
 * demo姐姐帮我管理JimaMusicPlayer内的音乐库
