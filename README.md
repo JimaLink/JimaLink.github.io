@@ -32,7 +32,6 @@
 * [iziToast](https://izitoast.marcelodolza.com/)
 * [Iconfont](https://www.iconfont.cn/)
 * [jQuery](https://jquery.com/)
-* [懒耗子音乐播放器]
 ### API
 
 * [小歪 API](https://api.ixiaowai.cn/)
