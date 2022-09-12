@@ -1,18 +1,19 @@
 <p>
-<strong><h2>Snavigation</h2></strong>
-一个简约的起始页
+<strong><h2>JimaLink</h2></strong>
+起始页
 </p>
+>尚未完成,目前版本为0.1
 
-![Snavigation.png](https://s2.loli.net/2022/07/15/FE6U2BJCynHDep8.jpg)
+### 图片预览
+* [点击预览](https://jimalink.github.io/JimaLink.png)
 
->尚未完成
 
-### Demo
->由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
+### 提示
+>由于 CDN 缓存原因，如果要查看最新缓存效果请按Ctrl+F5
 
-- [Snavigation](https://snavigation.vercel.app/)
+- 点击[JimaLink](https://www.jimmma.top/)进入JimaLink
 
-### 功能
+### 各种功能
 
 - [x] 载入动画
 - [x] 搜索引擎切换
@@ -21,24 +22,39 @@
 - [x] 网站背景自定义
 - [x] 数据备份及恢复
 - [x] 移动端适配
-* [ ] 还没想好呢
+- [x] 音乐播放
+- [x] JimaMusicPlayer音乐播客
 
-### 插件
+
+
+### 插件提及
 
 * [iziToast](https://izitoast.marcelodolza.com/)
 * [Iconfont](https://www.iconfont.cn/)
 * [jQuery](https://jquery.com/)
-
 ### API
 
 * [小歪 API](https://api.ixiaowai.cn/)
 * [天气 API](https://www.tianqiapi.com/)
+* [一言hitokoto](https://hitokoto.cn/)
+* [懒耗子音乐 API]
 
-### 鸣谢
+### 感谢
+* demo姐姐帮我管理JimaMusicPlayer内的音乐库
+* [demo的网易云主页](https://music.163.com/#/user/home?id=556134601)
+* 10YTX为我鼓捣网站鼓捣魔怔了
+* [10YTX](http://im10ytx.top/)
+* 默绘666
+  虽然什么都没干，但是真的谢谢他了
+* [mohui666](https://mohui666.top/)
+
+### 特别感谢
 
 本站部分内容参考自
 
 * [青柠起始页](https://limestart.cn/)
 * [sou2](https://github.com/yeetime/sou2/)
+* [Snavigation](https://snavigation.vercel.app/)
 
-<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2022-%E7%84%A1%E5%90%8D-red"></a>
+
+<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue">
