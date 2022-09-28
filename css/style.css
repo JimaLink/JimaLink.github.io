@@ -955,7 +955,7 @@ input[type="radio"]:checked+label {
 /*页脚*/
 .foot {
     position: absolute;
-    bottom: 10px;
+    bottom: 17px;
     z-index: 1000;
     text-align: center;
     width: 100%;
@@ -964,8 +964,8 @@ input[type="radio"]:checked+label {
 }
 
 .head{
-    position: relative;
-    top: -930px;
+    position: absolute;
+    top: -800px;
     z-index: 1000;
     text-align: center;
     width: 100%;
