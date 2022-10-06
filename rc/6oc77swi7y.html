@@ -1,0 +1,765 @@
+<!doctype html>
+<html>
+<head>
+	<title>济宁市网上政务大厅&nbsp;任城区</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<script type="text/javascript">
+		
+		var __webPath = "/icity/";
+		var __signature = "fa66821665057103917";
+		var signupUrl="/icity/uc/register";
+	</script>
+	<link href="static/css/custom.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="static/js/a.js"></script>
+	<script type="text/javascript" src="static/js/common.js"></script>
+	<script type="text/javascript" src="static/js/laypage.js"></script>
+	<script type="text/javascript" src="static/js/jquery.qrcode.min.js"></script>
+	<script type="text/javascript" src="static/js/holder.js"></script>
+	<script type="text/javascript" src="static/js/jquery.jqpagination.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/jqpagination.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="/icity/public/assets/js/html5.min.js"></script>
+		<script src="/icity/public/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		plugin.add('dialog', {
+			path: '/icity/public/scripts/dialog/a?t=js&m=jquery.artDialog.js,plugins/iframeTools.js',
+			type: 'js',
+			charset: 'utf-8',
+			rely: ['dialog_css']
+		});
+		plugin.add('dialog_css', {
+			path: '/icity/public/scripts/dialog/skins/simple.css',
+			type: 'css',
+			charset: 'utf-8'
+		});
+		plugin.add('tree', {
+			path: '/icity/public/scripts/zTreeStyle/jquery.ztree.js',
+			type: 'js',
+			charset: 'utf-8',
+			rely: ['tree_css']
+		});
+		plugin.add('tree_css', {
+			path: '/icity/public/scripts/zTreeStyle/zTreeStyle.css',
+			type: 'css',
+			charset: 'utf-8'
+		});
+		plugin.add('calendar', {
+			path: '/icity/public/scripts/calendar/calendar-min.js',
+			type: 'js',
+			charset: 'utf-8',
+			rely: ['calendar_css']
+		});
+		plugin.add('calendar_css', {
+			path: '/icity/public/scripts/calendar/calendar-min.css',
+			type: 'css',
+			charset: 'utf-8'
+		});
+	</script>
+</head>
+<body>
+ <link href="static/css/index4.css" rel="stylesheet" type="text/css">
+<script src="static/js/jquery_002.js"></script>
+<script src="static/js/jquery_003.js"></script>
+<script src="static/js/jquery_004.js"></script>
+<script src="static/js/jquery_005.js"></script>
+<script src="static/js/home.js"></script>
+<style>
+* {
+	box-sizing: content-box;
+}
+.nav ul li a {
+    color: #111;
+}
+</style>
+<!--head-->
+ <script src="static/js/wonders.log.min.js"></script> 
+<script>
+var publicEncryptStr = "";//加密后的办件信息
+var userIdMap = "";//统一身份认证uuid
+$(function() {
+  //调用 wondersLog 时先做判空，避免js加载失败后，导致页面崩溃的情况  eventTracking
+  if (typeof wondersLog != "undefined") {
+	debugger;
+	 // 山东一网通办统一token，不可修改
+        var token = 'sdywtb';
+        wondersLog.init(token);
+        
+            //do nothing
+    	   
+  }
+});
+//获取uuid
+function getUuidByUid(uid){
+	 var cmd = new LEx.Command("app.uc.UserCmd");
+     cmd.setParameter("uid", "");
+     ret = cmd.execute("getMapAndUserInfo");
+     userIdMap =  ret.data[0].USER_ID_MAP;
+     return ret.data[0].USER_ID_MAP;
+}
+//申报外链
+function linkOutApply(linkOutUrl,deptName,itemName){
+	if (typeof wondersLog != "undefined") {
+		if(linkOutUrl)
+			linkOutUrl = linkOutUrl.substring(linkOutUrl.indexOf("//")+2)
+        // TODO: 触发外站链接访问事件
+        wondersLog.track_event('外站链接访问', {targetId: linkOutUrl, targetName: deptName+'-'+itemName});
+    }
+}
+
+
+//申报行为采集
+function recordApply(state){
+	if(""==publicEncryptStr||publicEncryptStr=="undefined"){
+		publicEncryptStr = getpublicEncryptStr();
+	}
+	
+	if("start"==state){
+		  wondersLog.track_event('开始记录办件', {encrypted: true, info: publicEncryptStr});
+	        // TODO: 在办事开始时（通常为办事页面打开后）, 申明耗时类事件："采集办件信息"
+	      wondersLog.time_event('采集办件信息');
+	}else if("end"==state){
+		 wondersLog.track_event('采集办件信息', {encrypted: true, info: publicEncryptStr});
+	}
+	
+}
+//获取办件加密信息
+function getpublicEncryptStr(){
+	
+	if(""==userIdMap||userIdMap=="undefined"){
+		 userIdMap = getUuidByUid( "");
+	}
+	
+	var cmd = new LEx.Command("sd.app.pmi.hits.AESUtil");
+    cmd.setParameter("itemCode", "");
+    cmd.setParameter("itemName", "");
+    cmd.setParameter("deptName", "");
+    cmd.setParameter("userId", userIdMap);
+    cmd.setParameter("userType", 1);
+    cmd.setParameter("projectTarget", "");
+    cmd.setParameter("licenseNo", "");
+    if(postData.objectType=="3"){
+    	 cmd.setParameter("mobile", $("#contactPhone").val());
+    }else{
+    	 cmd.setParameter("mobile",   $("#linkPhone").val());
+    }
+    ret = cmd.execute("getAESEncrypt");
+    publicEncryptStr = ret.data;
+    return publicEncryptStr;
+}
+</script>
+<div class="header">
+	<div class="head-cont">
+		<div class="head-top">
+			<!--logo-->
+			<div class="head-left">
+				<div class="logo"><img src="static/picture/head-logo.png"></div>
+				<div class="site" id="zd" style="
+    margin-left: 15px;
+    font-size: 13px;
+    padding: 5px 15px;
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    background: #f0f0f0;
+    cursor: pointer;
+    margin-top: 40px;
+"><span>任城区</span><img src="static/picture/head-sit.png"></div>
+			</div>
+			<!--you-->
+			<div class="head-right">
+			<a href="#">任城区政府门户网站</a>|
+			
+				<a href="javascript:void(0);" onclick="doLogin();"><div class="login">登录</div></a>|
+				<a href="javascript:void(0);" onclick="doLogin();"><div class="enrol">注册</div></a>
+			
+			</div>
+		</div>
+		<!--nav-->
+		<div class="nav" style="
+    width: 1100px;
+    margin-top: 8px;
+    position: absolute;
+">
+			<ul>
+				<li class="checked navigation p1"><a href="dhz3ef1c8b.html" style="padding: 10px 0px;"> 首页</a></li>
+				<li class="navigation p2"><a href="personal8.html" style="padding: 10px 0px;">个人办事</a> </li>
+				<li class="navigation p3"><a href="legal8.html" style="padding: 10px 0px;">法人办事</a></li> 
+				<li class="navigation p4"> <a href="" style="padding: 10px 0px;">结果公示</a></li> 
+				<li class="navigation p5"><a href="i3a2njyfqt.html" style="padding: 10px 0px;">权力清单</a> </li>
+ 
+				<li class="navigation p7" style="display:none;"> <a href="#" style="padding: 10px 0px;">中介超市</a></li>   
+				<li class="navigation p8" style="display:none;"> <a href="#" style="padding: 10px 0px;">公共资源交易中心</a></li>    
+			</ul>
+			<div class="header-search">
+				<input class="header-search-input key" type="text" name="keyword">
+				<button type="" class="header-search-submit"><img src="static/picture/head-search.png" onclick="searchX();"></button>
+			</div> 
+		</div>
+		<!--站点切换-->
+		<style>
+  .site-mian190618{
+	font-size:14px;
+	width:1100px;
+	margin:0 auto;
+	position: absolute;
+    top: 70px;
+    z-index: 20;
+	background-color: rgba(255,255,255,1);
+	display:none;
+	box-shadow: 0px 0px 15px rgba(150, 150, 150, .5);
+	min-height: 250px;
+	padding: 25px
+  }
+.site-mian190618 a{ color:#333}	
+.site-mian190618 .site-m-c{
+	width: 100%
+	padding: 15px 0px;
+}
+.site-mian190618 .site-m-c .site-info190618{
+	min-height: 70px;
+	margin-bottom: 20px;
+	}
+	.site-mian190618 .site-info190618 .site-info-b190618{
+	font-size:16px;
+	font-weight:bolder;
+	margin-left: 10px;
+	text-align: left;
+	color: #333;
+	}
+	.site-mian190618 .site-info-n190618 ul li {
+	width: 130px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	margin: 10px;
+	background: #f6f6f6;
+	float: left;
+	overflow:hidden; 
+    text-overflow:ellipsis; 
+	white-space:nowrap;
+	cursor: pointer;
+	}
+	.site-mian190618 .site-info-n190618 ul li a{
+	height: 32px;
+	line-height: 32px;
+}	
+.site-mian190618 .site-info-n190618 ul li:hover{
+	background: #eee;
+	}
+</style>
+<!--站点切换-->
+<div class="site-mian190618" id="zd-min">
+	<div class="site-m-c">
+		<div class="site-info190618">
+			<div class="site-info-b190618">区</div>
+			<div class="site-info-n190618">
+			  <ul>
+				<li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/icity/');">任城区</a></li>
+			  </ul>
+			</div>
+		</div>
+		<div class=" site-info190618">
+			<div class="site-info-b190618">街道</div>
+			<div class="site-info-n190618">
+				<ul>
+				 <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilsq/');">李营街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilzq/');">长沟镇</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyihdq/');">唐口街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyiynx/');">安居街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyitcx/');">南苑街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyiysx/');">观音阁街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyillx/');">越河街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyifx/');">阜桥街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyipyx/');">济阳街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyijnx/');">古槐街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyimyx/');">二十里铺街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilsx/');">金城街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyigxkfq/');">仙营街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyimsdjq/');">南张街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilgkfq/');">喻屯镇</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="site-info" style="display:none;">
+			<div class="site-info-b">乡镇社区</div>
+			<div class="site-info-n"><a href="#">富锦市</a> <a href="#">同江市</a> <a href="#">桦南县</a></div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	$("#zd").find("span").html("任城区");
+});
+</script>   
+	</div>
+</div>
+<script>
+//登录注册注销相关
+function doLogin(ucPath,loginType) {	
+  var redirectTo=LEx.webPath+"login?goto="+encodeURIComponent(window.location.href);
+	window.location.href = redirectTo;
+  return false;
+}
+function doLogout(ucPath) {
+	var logout_url=null;	 
+		logout_url = LEx.webPath+"logout?goto="+encodeURIComponent(window.location.href);
+	window.location.href = logout_url;
+  return false;
+}
+
+function searchX(){
+	 var key=$(".key").val();
+	
+	 if(!LEx.isNotNull(key)){
+		 alert("请输入要查询的内容~");
+		 return false;
+	 }
+	 window.open("/icity/jrobot/search?key="+ encodeURIComponent(key));
+}
+</script>
+	
+	<script type="text/javascript" src="static/js/laypage.js"></script>
+	<script src="static/js/layer.js"></script>
+	
+
+<link href="static/css/jggs.css" rel="stylesheet" type="text/css">
+<!--主题分类-->
+<div class="sort-jggs">
+	<div class="jggs-top">
+		<div class="jggs-top-b">结果公示</div>
+	</div>
+</div>
+<div class="sort">
+	<!--部门-->
+	<div class="depart">
+		<ul class="depart-ul depart-shrink" id="dept-list">
+		</ul>
+		<div class="depart-more">全部展开</div>
+	</div>
+</div>
+<!--标题-->
+<div class="filter">
+	<div class="filter-con">
+		<div class="f-b">全部部门</div>
+		<div class="f-quantity">共<span id="thecurrentlyselectedCount">0</span>个业务</div>
+		<div class="f-sort" style="display:none;">
+			<select name="类别">
+				<option>全部类型</option>
+				<option>行政许可</option>
+				<option>公共服务</option>
+				<option>行政处罚</option>
+				<option>行政强制</option>
+				<option>行政征收</option>
+			</select>
+		</div>
+		<div class="f-search" style="left: 580px;">
+			<input name="搜索" type="text" placeholder="请输入需要搜索的关键词" id="inputSearchName">
+			<div class="f-s-button" style="margin-top: -19px;"> <img src="static/picture/gr-search.png" class="onClickClass" cate="searchName"></div>
+		</div>
+	</div>
+</div>
+<!--内容-->
+<div class="matter-list">
+	<ul id="itemList">
+		<!-- 加载办件结果 -->
+	</ul>
+	<!--页码-->
+	<p class="text-center" id="project-none" style="display: none;margin-top: 10px;">
+	<span style="background-color: #F1F2F3; padding: 8px 200px; color: #666;">暂无办事服务</span>
+	</p>
+	<!-- 分页显示位置 -->
+	<nav class="text-center" id="layer" style="margin-top: 10px;"></nav>
+</div>
+<script>
+	var deptid="", projectname="",itemcode="",receiveNum="",deptname='',itemType='';
+	var endTime = "";
+	var startTime = "";
+	var limit=8;
+	var pageTotal=0;
+
+	function queryDeptAggregation(hallDept){
+		var lay = layer.msg('部门加载中，请稍等', {
+			icon: 16
+			,shade: 0.3
+			,time: -1
+		});
+		var command = new LEx.Command("app.icity.publicity.PublicityCmd");
+		command.setParameter("regionCode", "370811000000");
+		command.setParameter("receiveNum", receiveNum);
+		command.setParameter("applicant", "");
+		command.setParameter("itemName", "");
+		command.setParameter("projectName", projectname);
+		command.setParameter("dateFrom", startTime);
+		command.setParameter("dateTo", endTime);
+		command.execute("queryDeptAggregation", false, function(ret){
+			if (ret.state == 1) {
+				var deptList = ret.data.aggregations.acceptdeptid.buckets;
+				deptList = deptList.filter(x=>hallDept.find(y=>y.CODE==x.key)!=undefined)
+						.map(x=>{
+							var hall = hallDept.find(hall=>hall.CODE==x.key);
+							return {
+								name: hall.NAME,
+								code: hall.CODE
+							}
+						});
+				var strHtml = "";
+				strHtml += '<li title="" tag="" class="active"><a href="#">全部</a></li>';
+				for (var i = 0; i < deptList.length; i++) {
+					strHtml += '<li title="' + deptList[i].name + '" data-deptname="' + deptList[i].name + '" data-deptcode="'+deptList[i].code+'">' +
+							'<a href="javascript:void(0)">' + deptList[i].name + '</a></li>';
+				}
+				$("#dept-list").html(strHtml);
+			}else{
+				alert('接口调用失败，请稍后重试');
+			}
+			layer.close(lay);
+		});
+	}
+
+	function queryPublicity(page){
+		var lay = layer.msg('办件加载中，请稍等', {
+			icon: 16
+			,shade: 0.3
+			,time: -1
+		});
+		var command = new LEx.Command("app.icity.publicity.PublicityCmd");
+		command.setParameter("deptCode", deptid);
+		command.setParameter("deptName", deptname);
+		command.setParameter("regionCode", "370811000000");
+		command.setParameter("receiveNum", receiveNum);
+		command.setParameter("applicant", "");
+		command.setParameter("itemName", "");
+		command.setParameter("projectName", projectname);
+		command.setParameter("pageNum", page);
+		command.setParameter("pageSize", limit);
+		command.setParameter("dateFrom", startTime);
+		command.setParameter("dateTo", endTime);
+		command.setParameter("orderBy", '');
+		command.execute("query", false, function(ret){
+			if (ret.state == 1) {
+					$("#itemList").html(LEx.processDOMTemplate("MattersListTemplate", ret));
+				var mtotal = ret.total;
+				if(mtotal==10000){
+					$('#thecurrentlyselectedCount').html('9999+');
+				}
+				pageTotal=Math.ceil(mtotal/limit);
+				if(pageTotal==0){
+					$("#project-none").show();
+					$("#layer").hide();
+					$("#view_page").hide();
+				} else{
+					$("#project-none").hide();
+					$("#layer").show();
+					layerPage();
+				}
+			}else{
+				alert('接口调用失败，请稍后重试');
+			}
+			layer.close(lay);
+		});
+	}
+
+	$(function(){
+		/*初始化导航栏选中状态*/
+		$(".navigation").removeClass("checked");
+		$(".navigation.p4").addClass("checked");
+		/*初始化办件列表*/
+		queryPublicity(1);
+		$(".onClickClass").click(function(){
+			projectname=$("#inputSearchName").val();
+			var m_cate = $(this).attr("cate");//判断点的是啥，dept部门
+			if(m_cate=="dept"){
+				$("#thecurrentlyselected-dept").html($(this).find("a").html());
+				deptid = $(this).attr("code");
+			}else if(m_cate=="itemType"){
+				itemType=$(this).val();
+			}
+			layerPage.inited = false;
+			queryPublicity(1);
+		});
+
+		$('#dept-list').on('click', 'li', function(){
+			deptid=$(this).data("deptcode")||'';
+
+			$('#dept-list li').removeClass("active");
+			$('#startTime').val("");
+			startTime = "";
+			$('#endTime').val("");
+			endTime = "";
+			$(this).addClass("active");
+			layerPage.inited = false;
+			queryPublicity(1);
+		})
+
+		var hallDept = getHallDept();
+		queryDeptAggregation(hallDept);
+		queryPublicity(1);
+	});
+
+	function getHallDept(){
+		var region_code=getSecurityValue("WebRegion");
+		var command = new LEx.Command("app.icity.ServiceCmd");
+		command.setParameter("region_code",region_code);
+		var ret = command.execute("getDeptList");
+		if(ret.state === 1 && ret.data) {
+			return ret.data.organ.filter(x=>x.IS_HALL=='1');
+		}else{
+			$('#dept-list').text('获取bsp部门失败');
+			return [];
+		}
+	}
+	//layerPage分页
+	function layerPage() {
+		if(layerPage.inited) {
+			return ;
+		}
+		layerPage.inited = true;
+		laypage({
+			cont : $("#layer"), //容器。值支持id名、原生dom对象，jquery对象,
+			pages : pageTotal, //总页数
+			skin : '#42a5f5', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
+			groups : 4, //连续显示分页数
+			jump : function(obj, first) {
+				var currPage = obj.curr;
+				if (!first) {
+					queryPublicity(currPage);
+				}
+			}
+		});
+		$('#layer .laypage_last').hide();
+	}
+
+	if(LEx.urldata.timeStart){
+		timeStart=LEx.urldata.timeStart;
+		if(timeStart=="today"){
+			startTime=timeFormat(new Date());
+		}else if(timeStart=="week"){
+			startTime=getFirstDayOfWeek(new Date());
+		}else if(timeStart=="month"){
+			startTime=getFirstDayOfMonth(new Date());
+		}else if(timeStart=="year"){
+			startTime=getFirstDayOfYear(new Date());
+		}
+	}
+
+	function timeFormat(date) {
+		if (!date || typeof(date) === "string") {
+			this.error("参数异常，请检查...");
+		}
+		var y = date.getFullYear(); //年
+		var m = date.getMonth() + 1; //月
+		var d = date.getDate(); //日
+		m = m < 10 ? "0" + m: m;
+		d = d < 10 ? "0" + d: d;
+		return y + "-" + m + "-" + d;
+	}
+
+	//获取这周的周一
+	function getFirstDayOfWeek (date) {
+		var weekday = date.getDay()||7; //获取星期几,getDay()返回值是 0（周日） 到 6（周六） 之间的一个整数。0||7为7，即weekday的值为1-7
+		date.setDate(date.getDate()-weekday+1);//往前算（weekday-1）天，年份、月份会自动变化
+		return timeFormat(date);
+	}
+
+	//获取当月第一天
+	function getFirstDayOfMonth (date) {
+		date.setDate(1);
+		return timeFormat(date);
+	}
+
+	//获取当年第一天
+	function getFirstDayOfYear (date) {
+		date.setDate(1);
+		date.setMonth(0);
+		return timeFormat(date);
+	}
+</script>
+<!--办件列表模板-->
+<textarea type="text/template" id="MattersListTemplate" style="display:none">
+{for h in data.hits.hits}
+	{var o=h._source}
+<li>
+	<div class="matter-list-text">
+		<a
+				href="/icity/icity/business/detail?receivenumber=${o.projid}&itemname=${o.itemname}&projectname=${o.projectname}&applicant=${o.applicant}&acceptdeptname=${o.acceptdeptname}&transactor=${o.transactor}&occurtime=${o.occurtime}&approvaltype=${o.approvaltype}&itemtype=${o.itemtype}&doneresult=${o.eaJcStepDone.doneresult}"
+				target="_blank">${o.projectname} </a>
+	</div>
+	<div class="matter-list-butt">
+		<a href="#" class="list-bszn clickable" title="${o.applicant}"> ${formatLenStr(o.applicant,0,6)}</a>
+		<a href="#"class="list-zxbl clickable">
+		{if o.eaJcStepDone.doneresult=="0"}
+			准予许可
+		{else}{if o.eaJcStepDone.doneresult=="1" }
+			退回办结
+		{else}{if o.eaJcStepDone.doneresult=="2" }
+			作废办结
+		{else}{if o.eaJcStepDone.doneresult=="3"}
+			删除办结
+		{else}{if o.eaJcStepDone.doneresult=="4" }
+			转报办结
+		{else}{if o.eaJcStepDone.doneresult=="5" }	
+			补正不来办结
+		{else}{if o.eaJcStepDone.doneresult=="6" }	
+			办结
+		{/if}{/if}{/if}{/if}{/if}{/if}{/if}
+		
+		</a>
+	</div>
+</li>
+{/for}
+</textarea>
+	
+	
+	
+	<!--漂浮导航-->
+<div class="floatnav">
+	<ul id="f-navul">
+		<li><a class="f-zzdb" href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/icity/project/jining_rencheng_wb_v1/default/public/assets/data/申报指南.doc');" download="申报指南.doc"><span>申办指南</span></a></li>
+		<li><a class="f-bj" href="robot.html"><span>智能问答</span></a></li>
+		<li><a id="zixun" class="f-ask" href="#" target="_self"><span>我要咨询</span></a></li>
+		<li><a id="tucao" class="f-tsjy" href="#"><span>吐槽找茬</span></a></li>
+		<!--<li><a class="f-phone" href="#"><span>App</span></a></li>-->
+		<li><a class="f-phone" href="#"><span>公众号</span></a></li>
+		<li><a id="sszx" class="f-wyjc" href="#"><span>实时咨询</span></a></li>
+		<li><a class="f-top" href="javascript:window.scrollTo(0,0)"><span>返回顶部</span></a>
+		</li>
+	</ul>
+	<div class="nav-sq" id="sq">收起</div>
+	<div class="f-ydd">
+		<i class="arrow"></i>
+		<div class="f-ewm">
+			<div class="android"><img style="width:160px;height:150px" src="static/picture/weixin.png"><div>微信公众号</div>
+			</div>
+		</div>
+	</div>
+	<div class="f-ytc">
+		<i class="arrow"></i>
+		<div class="f-ewm">
+			<div class="android"><img style="width:160px;height:150px" src="static/picture/tucao.png"><div>吐槽找茬</div>
+			</div>
+		</div>
+	</div>
+	<div class="f-yzx" style="width: 240px;height: 80px;margin-right: 50px;">
+		<i class="arrow"></i>
+<!--		<div class="f-ewm" style="padding-top:20px;">-->
+<!--			<div class="android">-->
+<!--				<div>业务咨询电话：15725373655</div>-->
+<!--				<div>技术服务电话：0537-5660868</div>-->
+<!--			</div>-->
+<!--		</div>-->
+		<img src="static/picture/wyzx.jpg">
+	</div>
+	<div class="f-sszx" style="
+	width: 140px;
+	height: 180px;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	right: 140px;
+    top: 280px;display:none;">
+		<i class="arrow"></i>
+<!--		<div class="f-ewm" style="padding-top:20px;">-->
+
+<!--			<div class="android">-->
+<!--				<div onclick="openQQ('957837297')"><img src="/icity/project/jining_rencheng_wb_v1/default/public/assets/img/bm-14.png"/>957837297</div>-->
+<!--				<div onclick="openQQ('1138265365')"><img src="/icity/project/jining_rencheng_wb_v1/default/public/assets/img/bm-14.png"/>1138265365</div>-->
+<!--			</div>-->
+<!--		</div>-->
+		<a onclick="openQQ('3084808593')">
+			<img src="static/picture/sszx.png">
+		</a>
+
+	</div>
+	<script>
+		function openQQ(m_qq) {
+
+			window.open('tencent://message/?Menu=yes&uin='+m_qq+'&Site=', '_self');
+		}
+	</script>
+</div>
+<!--footer-->
+<div class="footer" style="display: inline-block;width:100%;">
+	<div class="footer-con">
+		<div class="footer-left"><a target="_blank" href="javascript:window.open('http://www.gov.cn/c125533/jbxxk.htm');" style="margin-right:20px;"><img src="static/picture/footer-1.png"></a>
+		</div>
+		<div class="footer-midle">
+			<div class="footer-l-list">
+				<div class="f-list-n">中共济宁市任城区委、济宁市任城区人民政府版权所有 </div>   <div class="f-split1"></div>
+				<div class="f-list-n">济宁市任城区电子政务管理办公室承建</div>   <div class="f-split1"></div>
+				<!--<div class="f-list-n">任城区行政审批服务局承办</div> <div class="f-split1"></div>-->
+				<div class="f-list-n"> 鲁ICP备05022544号</div>
+			</div>
+			<div class="footer-l-text">
+				<span>网站标识码：3708110001 </span>
+				<span>鲁公网安备37081102000009号</span>
+				<span>区长公开电话:6500000</span>
+				<span><a href="#">网站地图</a></span>
+				
+				
+				<span>技术咨询电话：0537-5660868</span>
+				
+				
+
+			</div>
+		</div>
+		<div class="footer-right">
+			<a target="_blank" href="javascript:window.open('http://bszs.conac.cn/sitename?method=show&id=5404D5F141FC4E0EE053022819AC047D');"><img src="static/picture/footer-2.png"></a>
+		</div>
+	</div>
+</div>
+<script>
+	function gotodh(){
+		//获取票据
+		var userType = "";
+		var ticket="";
+		var appmark = "jiningsp";
+		var isLoginnew = "1";
+		
+		//do nothing
+		
+	}
+	$("#tucao").hover(
+			function() {
+				$(".f-ytc").show();
+			}, function() {
+				$(".f-ytc").hide();
+			}
+	);
+	$("#zixun").hover(
+			function() {
+				$(".f-yzx").show();
+			}, function() {
+				$(".f-yzx").hide();
+			}
+	);
+	$("#sszx").hover(
+			function() {
+				$(".f-sszx").show();
+			}, function() {
+				$(".f-sszx").hover(function(){
+					$(".f-sszx").show();
+				},function(){
+					$(".f-sszx").hide();
+				});
+			}
+	);
+</script>
+</body>
+
+	
+<script type="text/javascript">
+jQuery(document).ready(function(e) {
+	jQuery.ajaxSetup({
+		cache: false
+	});
+	if(typeof init == "function"){
+		init();
+	}
+});
+</script>
+</html>
+
+		
