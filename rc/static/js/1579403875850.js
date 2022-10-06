@@ -1,0 +1,11 @@
+document.writeln("<style>");
+document.writeln("body{min-width:1200px;font-family:微软雅黑 !important;}");
+document.writeln("#jquery_jplayer{display:none !important;}");
+document.writeln(".topmost{width: 1200px;height: 30px;margin: auto;font-size: 15px;line-height: 30px;}");
+document.writeln("#wcagnav{height:55px  !important;}");
+document.writeln(".toolbar_bottom li{height:36px !important;}");
+document.writeln(".toolbar_bottom{margin-right:7px !important;}");
+document.writeln("</style>");
+document.writeln("<script id=\"barrierfree\" src=\"http://tyjspt.shandong.gov.cn/module/web/accessiblereading/load.js\"></script>");
+document.writeln("<a href=\"javascript:;\" onclick=\"toggleToolBar();\" style=\"color:#333;\">无障碍浏览</a>");
+document.writeln(" ");
