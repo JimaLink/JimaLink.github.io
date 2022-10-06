@@ -1,0 +1,903 @@
+
+/* CSS Document */
+
+body, div, p, ul, li, span {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 15px;
+	font-family: 'Microsoft YaHei';
+}
+body {
+	background: #eeeeee;
+}
+table {
+	border-spacing: 0;
+}
+td {
+	padding: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #434343;
+	font-family: 'Microsoft YaHei';
+	line-height: 26px;
+}
+a:hover {
+	color: red;
+}
+#barrierfree_container {
+	background: url(../image/1912121421322606618.jpg) center 200px;
+}
+/*banner部分*/
+
+.banner-box {
+	/*height:166px;*/
+	width: 100%;
+	/*background:url(banner-box_01.jpg);*/
+	/*background-repeat:repeat-x;*/
+	background-color: #FFFFFF;
+}
+#banner {
+	width: 1200px;
+	height: 166px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+}
+#banner .search {
+	position: absolute;
+	top: 230px;
+	right: 375px;
+	width: 336px;
+	height: 37px;
+}
+.search .text_search {
+	float: left;
+	width: 265px;
+	height: 37px;
+	line-height: 37px;
+	padding-left: 10px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.search .btn_search {
+	float: left;
+	width: 61px;
+	height: 37px;
+}
+.first-station {
+	margin-right: 81px;
+	margin-top: 5px;
+}
+.first-station a {
+	color: #0063B6;
+}
+/*logo部分*/
+.logo-box {
+	width: 100%;
+	height: 45px;
+	/*background:url(logo-box_05.jpg);*/
+	/*background-repeat:repeat-x;*/
+	background-color: #2081d2;
+}
+.logo {
+	width: 1118px;
+	height: 45px;
+	margin: 0 auto;
+}
+.logo-left {
+	float: left;
+	margin-top: 11px;
+	width: 9px;
+	height: 34px;
+	background: url(http://www.rencheng.gov.cn/images/1411/logo1_08.jpg);
+	background-repeat: no-repeat
+}
+.logo-right {
+	float: right;
+	margin-top: 11px;
+	width: 9px;
+	height: 34px;
+	background: url(http://www.rencheng.gov.cn/images/1411/logo4_08.jpg);
+	background-repeat: no-repeat
+}
+.logo-list {
+	float: left;
+	width: 1200px;
+	height: 45px;
+	background-color: #2081d2;
+}
+.ul1 {
+	width: 1200px;
+	height: 45px;
+}
+.ul1 li {
+	width: 182px;
+	height: 45px;
+	float: left;
+}
+.ul1 li a {
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+	font-family: 'Microsoft YaHei';
+	display: block;
+	height: 45px;
+	width: 182px;
+	text-align: center;
+	line-height: 46px;
+}
+.ul1 li a:hover {
+	background: #0099CC;
+}
+.li1 {
+	width: 1px;
+	height: 45px;
+	background: url(http://www.rencheng.gov.cn/images/1411/li1_07.jpg);
+	background-repeat: no-repeat;
+}
+/*logo部分结束*/
+
+
+/*第一部分正文*/
+
+.wrapper {
+	width: 1200px;
+	background: #ffffff;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	position: relative;
+}
+/*工作动态*/
+.gzdt-box {
+	margin-top: 20px;
+	height: 331px;
+	width: 411px;
+	margin-left: 20px;
+	float: left;
+}
+.gzdt-title {
+	font-weight: bold;
+	float: left;
+	background: #328edb;
+	width: 90px;
+	height: 30px;
+	color: white;
+	font-size: 15px;
+	line-height: 30px;
+	font-family: 'Microsoft YaHei';
+	text-align: center;
+}
+/*文字部分前缀和日期 以及更多*/
+.gengduo {
+	color: black;
+	float: right;
+	font-size: 15px;
+	line-height: 30px;
+	font-family: 'Microsoft YaHei';
+	text-align: center;
+	width: 66px;
+	height: 30px;
+}
+.gengduo:hover {
+	color: red;
+}
+/*第一部分*/
+.first-box {
+	width: 1200px;
+	height: 470px;
+	margin-bottom: 20px;
+}
+/*图片新闻*/
+
+.photo-news {
+	margin-top:20px;
+	float: left;
+	height: 450px;
+	width: 800px;
+	margin-left: 20px;
+	background-repeat: no-repeat;
+}
+.lunbo{
+		height: 450px;
+	width: 800px;
+}
+.cont1_left {
+	width: 800px;
+	height: 450px;
+	float: left;
+}
+img {
+	border: 0;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+.js {
+	width: 90%;
+	margin: 10px auto 0 auto;
+}
+.js p {
+	padding: 5px 0;
+	font-weight: bold;
+	overflow: hidden;
+}
+.js p span {
+	float: right;
+}
+.js p span a {
+	color: #f00;
+	text-decoration: underline;
+}
+.js textarea {
+	height: 100px;
+	width: 98%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-top: 2px solid #aaa;
+	border-left: 2px solid #aaa;
+}
+.bord {
+	width: 100%;
+	height: 100%;
+	border: solid 0px #ccc;
+	padding: 2px;
+}
+.focusBox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font: 12px/1.5 Verdana, Geneva, sans-serif;
+	text-align: left;
+	background: white;
+}
+
+.focusBox .pic li a {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+.focusBox .pic img {
+	width: auto;
+	height: 448px;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.focusBox .pic {
+	float: left;
+	width: 800px;
+	height:450px;
+}
+.focusBox .pic li {
+	width: 800px;
+	height: 448px;
+	text-align: center;
+}
+.focusBox .txt-bg {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	height: 36px;
+	width: 100%;
+	background: #333;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+	overflow: hidden;
+}
+.focusBox .txt {
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	height: 37px;
+	width: 100%;
+	overflow: hidden;
+}
+.focusBox .txt li {
+	height: 36px;
+	line-height: 36px;
+	position: absolute;
+	bottom: -36px;
+	width: 800px;
+	overflow: hidden;
+}
+.focusBox .txt li a {
+	display: block;
+	color: white;
+	padding: 0 0 0 10px;
+	font-size: 15px;/*font-weight: bold;*/
+	text-decoration: none;
+	overflow: hidden;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.focusBox .num {
+	position: absolute;
+	z-index: 3;
+	bottom: 15px;
+	right: 10px;
+}
+.focusBox .num li {
+	float: left;
+	position: relative;
+	width: 25px;
+	height: 5px;
+	line-height: 15px;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.focusBox .num li a, .focusBox .num li span {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-decoration: none;
+}
+.focusBox .num li span {
+	z-index: 1;
+	background: #99d6fa;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.focusBox .num li.on a, .focusBox .num a:hover {
+	background: #e38038;
+}
+/*信息公开*/
+.xxgk_box {
+	float: left;
+	width: 340px;
+	margin-left: 20px;
+	margin-top: 70px;
+	background: #f7f7f7;
+	padding-bottom: 20px;
+}
+.left_title {
+	width: 300px;
+	height: 35px;
+	margin: auto;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid #666666;
+	box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+}
+.title_img {
+	float: left;
+	margin-left: 5px;
+	margin-top: 8px;
+}
+.title_txt {
+	float: left;
+	margin-left: 15px;
+	line-height: 35px;
+	height: 35px;
+	font-size: 20px;
+	color: #bb2335;
+}
+.fenlei {
+	width: 300px;
+	height: 330px;
+	margin: auto;
+	background: #FFFFFF;
+	overflow: scroll;
+}
+.fenlei_title {
+	width: 100%;
+	height: 40px;
+	background: #355e92;
+	line-height: 40px;
+	color: #FFFFFF;
+	font-size: 18px;
+	padding-left: 20px;
+}
+/*第二部分*/
+.second {
+	height: 274px;
+	width: 1200px;
+	margin-bottom: 20px;
+}
+/*教体资讯*/
+.jtzx {
+	height: 272px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.jtzx-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.jtzx-list {
+	margin-top: 15px;
+	height: 224px;
+}
+/*通知公告*/
+.tzgg {
+	height: 272px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.tzgg-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.tzgg-list {
+	margin-top: 15px;
+	height: 224px;
+}
+/*广告横幅*/
+.main_middle_mid {
+	width: 1160px;
+	margin: 0 auto;
+	height: 84px;
+	border: 1px #eee solid;
+	margin-bottom: 20px;
+}
+/*第三部分*/
+.secondz {
+	height: 240px;
+	width: 1200px;
+	margin-bottom: 20px;
+}
+/*政策法规*/
+.zcfg {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.zcfg-list {
+	margin-top: 15px;
+	height: 194px;
+}
+.zcfg-news {
+	height: 26px;
+	width: 518px;
+}
+.zcfg-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+/*公众服务*/
+.gzfw {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.gzfw-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.gzfw-list {
+	margin-top: 15px;
+	height: 194px;
+}
+/*公众服务结束*/
+/*第四部分*/
+.four_box {
+	height: 240px;
+	width: 1200px;
+	margin-bottom:20px;
+}
+
+/*教学教研*/
+.jxjy-box {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.jxjy-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.jxjy-list {
+	margin-top: 15px;
+	height: 194px;
+}
+/*特色学校*/
+.tsxx-box {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.tsxx-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.tsxx-list {
+	margin-top: 15px;
+	height: 194px;
+}
+/*第五部分*/
+.five_box {
+	height: 240px;
+	width: 1200px;
+	margin-bottom: 20px;
+}
+/*四有教师*/
+.syjs-box {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.syjs-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.syjs-list {
+	margin-top: 15px;
+	height: 194px;
+}
+/*阳光少年*/
+.ygsn-box {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.ygsn-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.ygsn-list {
+	margin-top: 15px;
+	height: 194px;
+}
+/*第六部分*/
+.six_box {
+	height: 240px;
+	width: 1200px;
+	margin-bottom: 20px;
+}
+/*视频展播*/
+.spzb {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.spzb-list {
+	margin-top: 15px;
+	height: 194px;
+}
+.spzb-news {
+	height: 26px;
+	width: 518px;
+}
+.spzb-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.spzb-list li {
+	float: left;
+	width: 260px;
+	height: 90px;
+	line-height:90px;
+	text-align: center;
+	margin:10px;
+	
+}
+/*专题专栏*/
+.ztzl {
+	height: 240px;
+	width: 570px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin-left: 20px;
+}
+.ztzl-list {
+	margin-top: 15px;
+	height: 194px;
+}
+.ztzl-news {
+	height: 26px;
+	width: 518px;
+}
+.ztzl-title {
+	background: #eeeeee;
+	height: 30px;
+	width: 570px;
+	border-top: 2px solid #3b93db;
+	border-left: 2px solid #3b93db;
+}
+.ztzl-list li {
+	float: left;
+	width: 270px;
+	height: 90px;
+	color: #fff;
+	text-align: center;
+	line-height: 142px;
+	
+}
+.ztzl-list li:nth-child(1),.ztzl-list li:nth-child(3){
+	margin-left:15px;
+	}
+.ztzl-list li:nth-child(1){
+	background-color: #8cb8e2;
+	}
+.ztzl-list li:nth-child(2){
+	background-color:#ecbd61;
+	}
+.ztzl-list li:nth-child(3){
+	background-color:#76c0cc;
+	}
+.ztzl-list li:nth-child(4){
+	background-color:#a2ce6f;
+	}
+.ztzl-list li:hover {
+	color: #fff;
+	background-color: #4d82bd;
+}
+.ztzl-list li a {
+	color: #fff;
+}
+.ztzl-list li:hover a {
+	color: #fff;
+	background-color: #4d82bd;
+}
+
+
+/*统一样式*/
+.list-list {
+	margin-top: 10px;
+	height: 224px;
+	width: 570px;
+}
+.list-news {
+	height: 224px;
+	width: 570px;
+}
+.list-li {
+	width: 570px;
+	height: 28px;
+}
+.dian {
+	height: 3px;
+	width: 3px;
+	background: url(../image/wbj_pic_1_11.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	margin-right: 8px;
+	margin-top: 13px;
+	margin-left: 5px;
+}
+.time {
+	font-size: 15px;
+	font-family: 'Microsoft YaHei';
+	float: right;
+	;
+	color: #858585;
+	height: 28px;
+	width: 94px;
+	text-align: center;
+	line-height: 28px;
+}
+.news-li {
+	float: left;
+	height: 28px;
+	font-size: 15px;
+	color: #434343;
+	font-family: 'Microsoft YaHei';
+}
+.time1 {
+	font-size: 15px;
+	font-family: 'Microsoft YaHei';
+	float: right;
+	;
+	color: #858585;
+	height: 26px;
+	width: 100px;
+	text-align: center;
+	line-height: 26px;
+}
+.dian1 {
+	height: 3px;
+	width: 3px;
+	background: url(../image/wbj_pic_1_11.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	margin-right: 8px;
+	margin-top: 13px;
+	margin-left: 15px;
+}
+.gengduo1 {
+	float: right;
+	margin-right: 10px;
+	color: black;
+	font-size: 15px;
+	line-height: 30px;
+	font-family: 'Microsoft YaHei';
+}
+.gengduo1:hover {
+	color: red;
+}
+.news-li1 {
+	float: left;
+	height: 26px;
+	font-size: 15px;
+	color: #434343;
+	font-family: 'Microsoft YaHei';
+}
+/*机构介绍*/
+
+.title-news {
+	float: left;
+	width: 155px;
+	height: 30px;
+	background: #338fdc;
+	color: #ffffff;
+	font-size: 15px;
+	font-family: 'Microsoft YaHei';
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+}
+/*友情链接*/
+.yqlj {
+	height: 85px;
+	background: #f9f9f9;
+	border-top: 3px #5c7dad solid;
+}
+.yqlj ul {
+	width: 1200px;
+	min-height: 80px;
+	margin: auto;
+	padding: 23px 75px;
+}
+.yqlj ul li {
+	width: 186px !important;
+	float: left;
+	margin-left: 30px;
+	position: relative;
+}
+.yqlj ul li:first-child {
+	margin-left: 0px;
+}
+.yqlj ul li .selector_first {
+	width: 100%;
+	line-height: 40px;
+	display: inline-block;
+	margin: 0 auto;
+	cursor: pointer;
+	background: url(../image/1908261746487079537.png) no-repeat;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #333;
+}
+.yqlj ul li .hover {
+	background: url(../image/yqljjt.jpg) no-repeat 190px 15px;
+}
+.selector_second {
+	background: #fff;
+	border: 1px solid #999;
+	list-style: none;
+	overflow-y: auto;
+	z-index: 1000;
+	position: absolute;
+	bottom: 38px;
+	width: 186px;
+	max-height: 310px;
+	display: none;
+	overflow: auto;
+	overflow-x: hidden;
+	font-size: 13px;
+}
+.selector_second ul {
+	display: block;
+}
+.selector_second ul li {
+	float: none;
+	line-height: 40px;
+	margin-left: 0 !important;
+	cursor: pointer;
+	width: auto;
+	font-size: 14px;
+	margin-right: 0;
+	height: 40px;
+}
+.selector_second ul li:hover {
+	background: #ededed;
+}
+.banquan {
+	height: 110px;
+	width: 100%;
+	background: url(http://www.rencheng.gov.cn/images/1411/banquan_02.jpg);
+	background-repeat: repeat-x;
+}
+.banquan-box {
+	width: 1110px;
+	height: 110px;
+	position: relative;
+}
+.banquan-box1 {
+	width: 1110px;
+	height: 110px;
+	margin: 0 auto;
+}
+.p-box {
+	width: 1110px;
+	float: left;
+	height: 80px;
+	margin-top: 30px;
+}
+.p1 {
+	font-size: 13px;
+	text-align: center;
+	color: #ffffff;
+}
+.banquan-logo {
+	position: absolute;
+	width: 52px;
+	height: 64px;
+	top: 18px;
+	right: 113px;
+	background: url(http://www.rencheng.gov.cn/images/1411/banquan-jiguan.jpg);
+}
+
+

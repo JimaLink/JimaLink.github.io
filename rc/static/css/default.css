@@ -1,0 +1,124 @@
+/***************************************************
+ * @用户	    :济宁市任城区党政门户 版权所有
+ * @开发	    :吉首初九网络科技有限公司--宇露
+ * @时间	    :2014年05月20日
+ * @网址	    :http://www.chujiusoft.com
+ ***************************************************/
+
+/* Css Reset */
+	*{ padding: 0; margin: 0; box-sizing:content-box !important; -webkit-box-sizing:content-box !important; -moz-box-sizing:content-box !important; }
+	h1, h2, h3, h4, h5, h6, address, caption, cite, code, dfn, em, var ,th  { font-style:normal; font-weight: normal;font-size: 100%;}
+    table{ border-collapse:collapse;}
+	fieldset,img { border: 0; }
+	address,caption,cite,code,dfn,em,strong,th,var {  }
+	ol,ul,li {list-style:none;}
+	li{ vertical-align:middle;}
+	em, i{ font-style:normal; font-weight:normal;}
+	img{border:none;}
+/* Public */
+	a{text-decoration: none;}
+	a:hover{outline: none;text-decoration: underline;}
+	.fl,.left{float:left; }
+	.fr,.right {float:right; }
+	.ta_f { text-align:left; }
+	.ta_r { text-align:right; }
+	
+/* 清除浮动*/
+    .clear{clear:both;}
+	.clearbox {border:none;border-top: 1px solid transparent !important;clear: both;font-size: 0;height: 0;line-height: 0;margin-top: -1px !important;visibility: hidden;}
+    .clearfix{display:inline-block;}
+    .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+/*边距定义边框*/
+	.mr10{ margin-right:10px;}
+	.mr12{ margin-right:12px;}
+	.mt10{margin-top:10px;}
+	.mt20{margin-top:20px;}
+	.mb6{ margin-bottom:6px;}
+	.mb10{ margin-bottom:20px;}
+	.mr101{ margin-right:25px;}
+/* frame */
+	html,body{ width:100%; height:auto;}
+	body{font-family:"微软雅黑",Helvetica,Arial; font-size:14px;-webkit-text-size-adjust: none;}
+	.wrapper,#header,#container,#footer{ width:100%; height:auto;}
+	#header{height:auto;}
+	.inner{width:1000px;height:auto;margin:0 auto;}
+	.inner-nav{width:1022px;height:auto;margin:0 auto;}
+
+/* top */
+	#header .top{width:100%;height:33px;background: #fafafa;position:fixed;top:0px;z-index: 9999;_position:absolute;_bottom:auto; _top:expression(eval(document.documentElement.scrollTop));}
+	.top .tool a{font-size: 12px;color:#323232;line-height:33px;}
+	.top .nav li{display: inline-block;padding-left:20px;margin-right:5px;_zoom:1;*display: inline;}
+
+	.top .nav li.qw{background:url(http://xc.rencheng.gov.cn/images/1411/quwei.png) no-repeat left center;}
+	.top .nav li.qrd{background: url(http://xc.rencheng.gov.cn/images/1411/qurenda.png) no-repeat left center;}
+	.top .nav li.qzx{background: url(http://xc.rencheng.gov.cn/images/1411/quzhengx.png) no-repeat left center;}
+	.top .nav li.qrwb{background: url(http://xc.rencheng.gov.cn/images/1411/qurenwb.png) no-repeat left center;}
+	.top .nav li a{font-size:12px;color:#5a5a5a;line-height: 33px;}	
+	
+	/* banner */
+	.banner{
+		width:100%;
+		height:170px;
+		/*background: url(header.png) repeat-x left top;*/
+	}
+	.toolBox{margin:0;padding:0;}
+	.toolBox .inner{width:1000px;height:38px;padding:0 10px;margin:0 auto;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;background-color:#fff;}
+	.toolBox .search{width:221px;height:28px;margin:5px 0 ;}
+	.toolBox .search .submit{width:50px;line-height: 28px;background: #2275bf;font-size: 12px;color:#fff;text-align: center;border:none;float:left;}
+	.toolBox .search .keywords{width:160px;height:26px;line-height: 26px;background: #fff;font-size: 12px;border:1px solid #e5e5e5;border-right:none;float:left;padding:0 5px;}
+	#time{background:url(http://xc.rencheng.gov.cn/images/1411/home.png) no-repeat left center;padding-left:20px;font-size:12px;line-height:38px;color:#656565;}
+
+/* navBox */
+	.navBox{width:1022px;margin:5px auto 0 auto;height:40px;border-top:5px solid #be0404;border-bottom: 1px solid #e1e1e1;}
+	.navBox .navlist{width:1021px;height:39px;border-left:1px solid #e1e1e1;}
+	.navBox .navlist li{display: inline-block;width:8.33%;height:40px;float:left;text-align: center;background-color:#fff;}
+	.navBox .navlist li.last{background: none;}
+	.navBox .navlist li a{display: inline-block;width:100%;height:39px;color: #be0404;border-top:1px solid #e1e1e1;border-right:1px solid #e1e1e1;line-height:39px;}
+	.navBox .navlist li a:hover,.navBox .navlist li.current a{background:#be0404;color:#fff;border-top:1px solid #be0404;border-right:1px solid #be0404;text-decoration: none;}
+
+/* Container */
+	#container{margin-bottom:10px;margin-top:0;}
+#container .inner{padding:5px 10px 0;border:1px solid #d9d9d9;border-top:none;background-color:#fff;}
+
+/* Footer */
+	#footer .ftlk{width:100%;height:33px;background:#f8f8f8;text-align: center;border-top: 2px solid #be0404;}
+	#footer .ftlk a{display: inline-block;font-size: 12px;font-weight: bold;line-height: 13px;color: #be0404;padding:0 10px;border-right:1px solid #be0404;margin:10px 0;}
+	#footer .ftlk a.last{border:none;}
+	#footer .copyright{width: 100%;height:100px;text-align: center;border-top:1px solid #ececec;background: #fff;padding-top:20px;}
+	#footer .copyright p{font-size: 12px;line-height: 30px;}
+	#footer .copyright p a {	color:#333;}
+
+/*  分页代码  */
+	.pageBox{padding:20px;text-align: center;}
+	.pageBox a{display: inline-block;font-size:12px;padding:0 10px;line-height:28px;background:#f2f2f2;color:#7f7f7f;}
+	.pageBox a:hover,.pageBox b a{background: #009afe;color:#fff;text-decoration: none;}
+
+	.article_page{margin:20px;padding:10px;border-top: 1px dotted #d2d1d1;font-size:12px;line-height:24px;}
+	.article_page li span{color:#fc2323;}
+	.article_page li a{color:#4a4a4a;}
+	.article_page li a:hover{color:#2258a6;}	
+	.article_page .print a{color:#4a4a4a;}
+	.article_page .print a:hover{color:#2258a6;}	
+
+
+/*********版权信息页与关于我们页面样式定义**********/
+.copyright_position{height:27px;line-height:27px;padding:0 10px;background: url(http://xc.rencheng.gov.cn/images/1411/hdBg.png) repeat-x left center;border:1px solid #d8d8d8;border-bottom: 2px solid #2358a6;}
+.copyright_position .position,.copyright_position .position a{font-size: 12px;color:#717171;}
+.copyright_position h1{font-family: "微软雅黑";font-size: 16px;color:#2258a6;}
+.copyright_list h1 {
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:16px;
+}
+.copyright_list p {
+	line-height:170%;
+	font-size:14px;
+	color:#333;
+}
+
+	
+	
+	
+	

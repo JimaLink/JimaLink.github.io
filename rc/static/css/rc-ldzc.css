@@ -1,0 +1,140 @@
+/*tab切换共用部分开始*/
+.wip_local{
+	width:1200px;
+	margin: 0px auto;
+	background:#ededed url(../image/local_png.png) no-repeat  24px center;
+	line-height: 40px;
+	height: 40px;
+	color: #454545;
+	font-size: 13px;
+	padding-left: 45px;
+}
+.wip_local td{
+	line-height: 40px;
+	color: #454545;
+	font-size: 13px;
+}
+.wip_local a{
+	color: #454545;
+	line-height: 40px;
+	color: #454545;
+	font-size: 13px;
+}.tab_title {
+	width: 100%;
+	height: 35px;
+	border-bottom: 2px solid #edece7;
+}
+.tab_title li {
+	float: left;
+	height: 35px;
+	padding: 0 13px;
+	line-height: 33px;
+	font-size: 15px;
+	color: #333;
+}
+.tab_title .current {
+	color: #196fbc;
+	font-weight: bold;
+	border-bottom: 2px solid #196fbc;
+}
+.tab_title .current a:link, .tab_title .current a:visited {
+	color: #196fbc;
+}
+.tab_title .current a:hover, .tab_title .current a:active {
+	color: #196fbc;
+}
+.tab_list {
+	width: 100%;
+	overflow: hidden; 
+}
+.tab_list li {
+	line-height: 30px;
+	font-size: 15px;height: 30px;
+}
+.tab_list .time {
+	float: right;
+	color: #999;
+}
+.tab_list .header {
+	margin: 0 8px;
+	top: -2px;
+}
+.tab_list a:link, .tab_list a:visited {
+	color: #333;
+}
+
+/*tab切换共用部分结束*/
+/*内容主体*/
+.main {
+	width: 1200px;
+	margin: 30px auto;
+	font-size: 15px;
+	color: #333;overflow: hidden;
+}
+.qzfld {
+	float: left;
+	width:340px;    padding: 20px 20px 20px 20px;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+	background-color: #fff;
+}
+.qzfld .tab_list span {
+	color: #196fbc;
+	line-height: 44px;
+	padding-left: 7px;
+}
+.qzfld .tab_list li {
+	width: 208px;
+	height: 33px;
+	text-align: center;
+	line-height: 33px;
+	color: #333;
+	margin: 10px auto;
+	background: url(../image/ld_bg.gif) no-repeat;
+}
+.qzfld .tab_list li a {
+	display: block;
+}
+.qzfld .tab_list li a:link, .qzfld .tab_list li a:visited {
+	color: #333;
+}
+.qzfld .tab_list li a:hover, .qzfld .tab_list li a:active {
+	color: #fff;
+	background: url(../image/ld_bg_on.gif) no-repeat;
+}
+.qzfld .tab_list li.on {
+	background: url(../image/ld_bg_on.gif) no-repeat;
+}
+.qzfld .tab_list li.on a:link, .qzfld .tab_list li.on a:visited {
+	color: #fff;
+}
+.qzfld .tab_list li.on a:hover, .qzfld .tab_list li.on a:active {
+	color: #fff;
+}
+/*领导简介*/
+.ldjj {
+	float: right;
+	width: 835px;
+	padding: 30px;    
+	height: 600px;
+	background-color: #fff;
+}
+.ldxx {
+	width: 100%;
+	overflow:hidden;
+}
+.ldPic {
+	float: left;
+}
+.ldInfo {float: right; width: 534px;min-height:150px;}
+.ldInfo li {
+	line-height: 30px;
+}
+.ldhd {
+	margin-top: 20px;
+}
+.ldhd .tab_list {
+	margin-top: 5px;
+}

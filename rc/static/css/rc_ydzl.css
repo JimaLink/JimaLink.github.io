@@ -1,0 +1,23 @@
+
+/* CSS Document */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body, a, div, p, ul, li, img, h3 { margin: 0; padding: 0; }
+body { font-family: "微软雅黑" !important;min-width: 1300px;font-size: 16px; }
+a { text-decoration: none; font-family: "微软雅黑"; color: #444;  }
+ul li { list-style: none; }
+.clearfix { clear: both; }
+ul:before, ul:after { content: ""; display: table; clear: both; }
+.fl{ float: left;}
+.fr{ float: right;}
+.top_header { background: url(http://www.rencheng.gov.cn/images/1982/cwhy_banner.jpg) no-repeat top center; height: 400px; }
+.top_side { width: 1300px; margin: 0 auto; }
+.top_side a { display: block; float: right; background-color: #70a6e6; color: #fff; padding: 2px 10px; margin-top: 10px; font-size: 14px; margin-left: 10px; }
+/*主体内容*/
+.container{ width: 1202px; margin: 0 auto;}
+.main_jc{ margin: 30px 0; border: 1px #e6e6e6 solid; border-top: 3px #196fbc solid;}
+.jc_tit{ height: 60px; line-height: 60px; padding-left: 30px; font-size: 24px; font-weight: bold; color: #255c8d; border-bottom: 1px #e6e6e6 solid;}
+.jc_con{ margin: 20px 0;}
+.jc_con ul li{ float: left; width: 220px; margin: 5px 10px; height: 60px;}
+.jc_con ul li a{ display: block;  line-height: 60px; text-align: center; font-size: 18px; background-color: #EEEEEE;}
+.jc_con ul li a:hover{ background-color: #196FBC; color: #FFFFFF; transition: 0.3s;}
+

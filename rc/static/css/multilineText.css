@@ -1,0 +1,73 @@
+/* 多行文本信息样式 */
+ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    /*text-align: left;*/
+}
+
+.cf:after {
+    display: block;
+    content: '';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+.column-cover {
+    width: 550px;
+    overflow: hidden;
+    margin-top: 10px;
+    align: left
+}
+
+.column-cover ul {
+    overflow: none;
+    margin-top: 0;
+    height: auto;
+    position: relative;
+    line-height: 32px;
+}
+
+.column-cover ul li {
+    background: url(../image/gsnw_pic_dian.gif) left 16px no-repeat;
+    padding-left: 10px;
+}
+
+.column-cover ul li a, .column-cover li span {
+    font-size: 16px;
+    color: #151515;
+}
+
+.column-cover ul li a:hover {
+    color: #E51F1F;
+}
+
+.column-cover ul li a span {
+    display: inline-block;
+    line-height: 32px;
+    margin-left: 2em;
+}
+
+.column-cover ul li.white {
+    position: relative;
+}
+
+.column-cover ul li.white ins {
+    width: 37px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.five {
+    height: 320px;
+}
+

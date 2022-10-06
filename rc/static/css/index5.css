@@ -1,0 +1,237 @@
+/***************************************************
+ * @用户	    :济宁市任城区党政门户 版权所有
+ * @开发	    :吉首初九网络科技有限公司--宇露
+ * @时间	    :2014年05月20日
+ * @网址	    :http://www.chujiusoft.com
+ ***************************************************/
+
+
+.row{width:100%;height:auto;}
+.line{border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;}
+
+
+/* 通用模块 */
+.common1{width:235px;height:auto;}
+.common1 .list_more{width:100%;height:31px;line-height:31px;border-bottom: 4px solid #d9d9d9;}
+.common1 .list_more .more a{font-size: 12px;color:#c0c0c0;margin-right:5px;}
+.common1 .list_more h2{display: inline-block;height:35px;text-align: center;color:#be0404;border-right:2px solid #fff;float: left;position:relative;top:0;}
+.common1 .list_more h2 span{ display:inline-block;border-bottom:4px solid #be0404;padding:0 5px;font-family:"微软雅黑";font-size:18px;line-height:31px; font-weight:bold;}
+.common1 .bd{height:170px;padding-top:10px;}
+.common1 .bg-list{height:75px !important;}
+/*.common1 .bd li{background: url(http://xc.rencheng.gov.cn/images/1411/li1.png) no-repeat left center;padding-left: 10px;}*/
+.common1 .bd li a{color:#424242;line-height:26px;}
+.commonn{ width:235px;height:auto;border:2px #d9d9d9 solid;}
+.commonn .list_more{width:100%;height:31px;line-height:31px;background-color:#d9d9d9;}
+.commonn .list_more .more a{font-size: 12px;color:#fff;margin-right:5px;}
+.commonn .list_more h2{display: inline-block;height:35px;text-align: center;color:#be0404;float: left;position:relative;top:0;}
+.commonn .list_more h2 span{display:inline-block;padding:0 5px;font-family:"微软雅黑";font-size:18px;line-height:31px; font-weight:bold;}
+.commonn .bd{height:250px;padding-top:10px;}
+.commonn .bg-list{height:170px !important;}
+.commonn .bd li a{color:#424242;line-height:26px;}
+
+.common2{width:325px;height:auto;}
+.common2 .list_more{width:100%;height:31px;line-height:31px;border-bottom: 4px solid #d9d9d9;}
+.common2 .list_more .more a{font-size: 12px;color:#c0c0c0;margin-right:5px;}
+.common2 .list_more h2{display: inline-block;height:35px;text-align: center;color:#be0404;border-right:2px solid #fff;float: left;position:relative;top:0;}
+.common2 .list_more h2 span{display:inline-block;border-bottom:4px solid #be0404;padding:0 5px;font-family:"微软雅黑";font-size:18px;line-height:31px; font-weight:bold;}
+.common2 .bd{height:170px;padding-top:10px;}
+/*.common2 .bd li{background: url(http://xc.rencheng.gov.cn/images/1411/li1.png) no-repeat left center;padding-left: 10px;}*/
+.common2 .bd li a{color:#424242;line-height:26px;}
+.common2 .bd .head_news{height:45px;background: none;padding:0;border-bottom: 1px dashed #d9d9d9;padding-bottom:5px;margin-bottom: 5px;}
+.common2 .bd .head_news h3{height:25px;line-height:25px;}
+.common2 .bd .head_news h3 a{font-size:14px;color:#424242;font-weight:bold;}
+.common2 .bd .head_news p{line-height:20px;font-size:12px;color:#7e7e7e;}
+
+/* hotnews s*/
+.hotNews{width:978px;height:75px;background:#f3f3f3;border:1px solid #e2e2e2;padding:0 10px;}
+.hotNews li{width:100%;text-align:center;}
+.hotNews li a{font:bold 34px "微软雅黑";line-height:75px;color:#be0404;}
+.hotNews li a:hover{text-decoration: none;}
+
+/*SideBox*/
+.slideBox{width:650px;height:390px;position: relative;border:1px solid #e2e2e2;padding:5px;}
+.slideBox .bd{position: absolute;width:628px;height:300px;}
+.slideBox .bd ul{overflow:hidden; zoom:1;}
+.slideBox .bd li {height:332px;}
+.slideBox .bd li .pic img{display: block;width:628px;height:300px;}
+.slideBox .bd li .txt{width:618px;/*position: absolute;*/bottom:0px;height:32px;line-height:32px;padding-left:10px;background-color: rgba(0,0,0,0.6);}
+.slideBox .bd li .txt a{color:#fff;}
+.slideBox .bd li .txt a:hover{text-decoration: none;}
+.slideBox .list_more{position: absolute;width:100px;height:32px;bottom:6px;right:6px;float:right;}
+.slideBox .list_more ul{float:right;}
+.slideBox .list_more li{display: inline-block;_zoom:1;float:left;width:15px;height:15px;color:#000;background: #fff;margin:10px 5px 0 0;line-height: 15px;cursor: pointer;;text-align: center;}
+.slideBox .list_more li.on{color:#fff;background: #25468a;}
+
+/* news */
+.news{width:316px;height:400px;border:1px solid #e4e4e4;padding:0 5px;}
+.news .list_more{width:100%;height:31px;line-height:31px;border-bottom: 4px solid #d9d9d9;}
+.news .list_more .more a{font-size: 12px;color:#c0c0c0;}
+.news .list_more h2{display: inline-block;height:35px;text-align: center;color:#be0404;border-right:2px solid #fff;float: left;position:relative;top:0;}
+.news .list_more h2 span{display:inline-block;border-bottom:4px solid #be0404;padding:0 5px;font-family:"微软雅黑";font-size:18px;line-height:31px; font-weight:bold;}
+.news .bd{text-align: left;padding:8px 0 0 0;}
+.news .bd li{line-height:28px;}
+.news .bd .li1 a{font-weight:bold;color:#be0404;}
+.news .bd .li2 a{color:#1a5dc2;}
+.news .bd .li3 a{color:#2d2d2d;}
+.news .bd .li3{padding-bottom: 5px;margin-bottom: 5px;border-bottom:1px dashed #d9d9d9;}
+.news .bd .last{padding:0;margin:0;border-bottom:none;}
+
+/* Special 专题报道*/
+.special{width:300px;height:auto;}
+.special .list_more{width:100%;height:31px;line-height:31px;border-bottom: 4px solid #d9d9d9;}
+.special .list_more .more a{font-size: 12px;color:#c0c0c0;}
+.special .list_more h2{display: inline-block;height:35px;text-align: center;color:#be0404;border-right:2px solid #fff;float: left;position:relative;top:0;}
+.special .list_more h2 span{display:inline-block;border-bottom:4px solid #be0404;padding:0 5px;font-family:"微软雅黑";font-size:18px;line-height:31px; font-weight:bold;}
+.special .bd{padding-top:10px;}
+/*.special .bd li{height:50px;margin-top:10px;}*/
+.special .bd ul{
+	width:125px;
+	float:left;
+	}
+.special .bd li a {
+    color: #424242;
+    line-height: 26px;
+}
+.video_more{ width:165px;
+float:right; display:block;
+padding-top:14px;
+}
+.special .bd .pic{width:123px;height:50px;margin-right:10px;float:left;}
+.special .bd .pic a{display:block;}
+.special .bd .pic img{display:block;width:123px;height:50px;}
+.special .bd .txt h3 a{font-weight:bold;color:#303132;line-height:26px;}
+.special .bd .txt p{font-size:12px;color:#787878;line-height:20px;}
+
+#meiti{width:363px;}
+
+/* Video*/
+.video{width:220px;height:auto;}
+.video .list_more{width:100%;height:31px;line-height:31px;border-bottom: 4px solid #d9d9d9;}
+.video .list_more .more a{font-size: 12px;color:#c0c0c0;}
+.video .list_more h2{display: inline-block;height:35px;text-align: center;background:#58bde2;float: left;position:relative;top:0;}
+.video .list_more h2 span{display:inline-block;padding:0 5px;font-weight:bold;line-height:35px;color:#fff;}
+.video .bd{height:240px;padding:10px 16px 30px;margin-top:10px;background: url(http://xc.rencheng.gov.cn/images/1411/video.png) no-repeat left top;}
+.video .bd li{display:inline-block;width: 90px;height:70px;margin:5px 0;*float:left;}
+.video .bd li img{width:90px;height:70px;}
+.video .bd li .title{display: none;}
+
+.imagesBox {margin-top:20px;border-top:1px solid #d9d9d9;}
+
+.imagesBox .list_more{width:100%;height:31px;line-height:31px;border-bottom: 4px solid #d9d9d9;}
+.imagesBox .list_more-bg{height:30px;background:url(../image/1907091449012417597.png) no-repeat top center;}
+.imagesBox .list_more .more a{font-size: 12px;color:#c0c0c0;margin-right:5px;}
+.imagesBox .list_more h2{display: inline-block;height:35px;text-align: center;color:#be0404;border-right:2px solid #fff;float: left;position:relative;top:0;}
+.imagesBox .list_more h2 span{display:inline-block;border-bottom:4px solid #be0404;padding:0 5px;font-family:"微软雅黑";font-size:18px;line-height:31px;}
+.imagesBox .list_more h2 span em{display:inline-block;width:20px;height:10px;background: url(http://xc.rencheng.gov.cn/images/1411/li1.png) no-repeat center center;}
+.imagesBox .bd {padding:15px 0 0px 10px;height:125px; }
+.imagesBox .bd ul{ display:inline-block;width:100%; overflow:hidden;  zoom:1; }
+.imagesBox .bd  ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center; position: relative; }
+.imagesBox .bd  ul li .pic{ text-align:center; }
+.imagesBox .bd  ul li .pic img{ width:178px; height:120px; display:block; }
+.imagesBox .bd  ul li .title{ width:100%;height:23px;position: absolute;bottom:0px;left:0px;line-height:23px;  }
+.imagesBox .bd  ul li .title span{ display:block;width:100%;height:23px;background: #000;opacity: 0.6;filter:alpha(opacity=60);position: absolute;bottom:0px;left:0px;}
+.imagesBox .bd  ul li .title a{display:block;width:100%;height:23px;font-size: 12px;color:#fff;position: absolute;bottom:0px;left:0px;text-align: center; }
+
+.ggz{
+    height: 315px;
+    overflow: hidden;
+}
+.ggzz{
+    width: 220px;
+    height: 140px;
+    /*border: 1px solid #000;*/
+}
+
+.video{
+    width:220px;
+    height:auto;
+}
+.video .list_more{
+    width:100%;
+    height:31px;
+    line-height:31px;
+    border-bottom: 4px solid #d9d9d9;
+}
+.video .list_more .more a{
+    font-size: 12px;
+    color:#c0c0c0;
+}
+.video .list_more h2{
+    display: inline-block;
+    height:35px;
+    text-align: center;
+    background:#58bde2;
+    float: left;
+    position:relative;
+    top:0;
+}
+.video .list_more h2 span{
+    display:inline-block;
+    padding:0 5px;
+    font-weight:bold;
+    line-height:35px;
+    color:#fff;
+}
+.video .bd{
+    height:240px;
+    padding:10px 16px 30px;
+    margin-top:10px;
+    background: url(http://xc.rencheng.gov.cn/images/1411/video.png) no-repeat left top;
+}
+.video .bd li{
+    display:inline-block;
+    width: 90px;
+    height:70px;
+    margin:5px 0;
+    *float:left;
+}
+.video .bd li img{
+    width:90px;
+    height:70px;
+}
+.video .bd li .title{
+    display: none;
+}
+
+/*lunbo*/
+    /*外框大小可调节*/
+    .cont1_left{width: 590px;height: 356px;float: left;}
+    /*轮播*/
+    .lunbo{width: 100%;height: 100%;overflow: hidden;}/*宽高自适应*/
+    img {border: 0;}
+    a{text-decoration: none;color: #333;}
+    a:hover {color: #1974A1;}
+    .js {width: 90%;margin: 10px auto 0 auto;}
+    .js p {padding: 5px 0;font-weight: bold;overflow: hidden;}
+    .js p span {float: right;}
+    .js p span a {color: #f00;text-decoration: underline;}
+    .js textarea {height: 100px;width: 98%;padding: 5px;border: 1px solid #ccc;border-top: 2px solid #aaa;border-left: 2px solid #aaa;}
+    .bord {width:100%;height: 100%;border: solid 0px #ccc;padding: 2px;}
+    .focusBox {position: relative;width: 100%;height: 100%;overflow: hidden;font: 12px/1.5 Verdana, Geneva, sans-serif;text-align: left;background: white;}
+    
+    /*照片尺寸更改*/
+    .focusBox .pic img {width: 650px;height: 390px;display: block;overflow: hidden;position: absolute;top: 0px;}
+    
+    .focusBox .pic img {display: block;}
+    .pic {float: left;}
+    .focusBox .txt-bg {position: absolute;bottom: 0;z-index: 1;height: 36px;width: 100%;background: #333;filter: alpha(opacity=40);opacity: 0.8;overflow: hidden;}
+    .focusBox .txt {position: absolute;bottom: 0;z-index: 2;height: 37px;width: 100%;overflow: hidden;}
+    .focusBox .txt li {height: 36px;line-height: 36px;position: absolute;bottom: -36px;}
+    .focusBox .txt li a {display: block;color: white;padding: 0 0 0 10px;font-size: 15px;/*font-weight: bold;*/text-decoration: none;}
+    /*bottom--调节点击按钮高度*/
+    .focusBox .num {position: absolute;z-index: 3;bottom: 15px;right: 8px;}
+    .focusBox .num li {float: left;position: relative;width: 18px;height: 5px;line-height: 15px;overflow: hidden;text-align: center;margin-right: 5px;cursor: pointer;}
+    .focusBox .num li a, .focusBox .num li span {position: absolute;z-index: 2;display: block;color: white;width: 100%;height: 100%;top: 0;left: 0;text-decoration: none;}
+    .focusBox .num li span {z-index: 1;background: #FFFFFF;filter: alpha(opacity=50);opacity: 1;}
+    /*按钮颜色变色*/
+    .focusBox .num li.on a, .focusBox .num a:hover {background: #fa8d00;}
+    /*滚动*/
+    /* 本例子css */
+    .hd{position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;}
+    .next{float: left;display: block;width: 30px;height: 67px;}
+    .prev{float: right;display: block;width: 30px;height: 67px;}
+    .picScroll {position: relative;background: #fff;overflow: hidden;width: 963px;margin:auto ;}
+    .picScroll ul { margin-top: 15px;overflow: hidden;width: 100%;}
+    .picScroll ul li {width: 263px;float: left;/*overflow:hidden;*/margin-left: 16px;}
+    .picScroll ul li img {width: 263px;height: 70px;display: block;}
+     #jquery_jplayer{display:none !important;}

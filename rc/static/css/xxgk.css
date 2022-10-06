@@ -1,0 +1,286 @@
+/*
+css样式表 项目部
+2010-12-10
+*/
+
+/*网页全局样式开始*/
+  html{
+    /*页面变灰*/
+    /*filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);*/
+  }
+
+  body
+  { 
+    /*body基本样式开始*/
+   
+      color:#3D3D3D;  /*字体颜色*/
+      FONT-FAMILY:微软雅黑; /*字体*/
+      text-align:left;  /*水平居左*/
+      margin-top: 0px;  /*页面上边距*/
+      margin-bottom: 0px; /*页面下边距*/
+      margin-left: 0px; /*页面左边距*/
+      margin-right: 0px;  /*页面右边距*/
+      marign:0 !important;padding:0 !important;
+      
+    /*body基本样式结束*/
+
+    /*body扩展样式开始*/
+      
+      scrollbar-face-color:#b9b9b9; 
+      scrollbar-highlight-color:#b9b9b9;
+      scrollbar-shadow-color:#b9b9b9;
+      scrollbar-3dlight-color:#b9b9b9;
+      scrollbar-darkshadow-color:#b9b9b9;
+      scrollbar-arrow-color:#F0F0F0;
+      scrollbar-track-color:#F0F0F0;
+      scrollbar-base-color:#F0F0F0;
+
+      /*拖动条的表面颜色*/
+      scrollbar-face-color:#fbf6e8; 
+      margin:0px;
+      MARGIN:auto; 
+      /*亮边*/  
+      scrollbar-highlight-color:#fbf6e8;
+      /*暗边*/
+      scrollbar-shadow-color:#aaaaaa;
+      scrollbar-3dlight-color:#aaaaaa;      
+      /*箭头颜色*/
+      scrollbar-arrow-color:#aaaaaa;  
+      /*拖动区域(TrackBar)颜色*/
+      scrollbar-track-color:#fbf6e8;  
+      scrollbar-darkshadow-color:#fbf6e8
+    /*body扩展样式结束*/
+  }
+
+  page
+  {
+    width:auto;!important;
+    max-width:1002px;!important;margin:0 auto; height:auto;!important;
+    width:1002px;
+  }
+   form{ padding:0px; margin:0px;}
+
+  /*页面容器初始化开始,*/
+ &lt;!--  tr,td,span {font-size:9pt; color:#3D3D3D; FONT-FAMILY:微软雅黑; line-height:180%;} --&gt;
+  /*页面容器初始化结束*/
+/*网页全局样式结束*/
+
+/*版通基本样式开始*/
+  /*文章标题样式*/
+  .title{font-size:16pt; FONT-FAMILY:微软雅黑; color:#3D3D3D; font-weight:bold; line-height:150%;}
+
+  /*首页、频道页栏目默认标题列表样式 小字体*/
+  .bt_link{FONT-FAMILY:微软雅黑; text-decoration: none; color:#3D3D3D;}
+
+  /*底层栏目页标题列表及文章正文样式 大字体*/
+  .bt_content{font-size:10.5pt; FONT-FAMILY:微软雅黑; text-decoration:none; color:#3D3D3D; line-height:180%;}
+
+  /*时间显示样式*/
+  .bt_time {  font-size:7pt; color:#999999; FONT-FAMILY:微软雅黑}
+  .bt_date {  font-size:9pt; color:#a7a7a7; FONT-FAMILY:微软雅黑; font-family:&quot;微软雅黑&quot;}
+
+  /*&quot;更多&quot;显示样式*/
+  .bt_more {font-size:9pt ;text-decoration:underline; color:#3D3D3D}
+
+  .bt_unline  {border-bottom:#999999 dashed 1px;}
+/*版通基本样式结束*/
+
+/*超链接样式开始 可自行扩展*/
+  a.white {FONT-FAMILY:微软雅黑; text-decoration: none; color:#ffffff;}
+  a.white:hover {FONT-FAMILY:微软雅黑; text-decoration:none; color:#ff0000;}
+  a.white:visited{FONT-FAMILY:微软雅黑; text-decoration: none; color:#ffffff;}
+
+  a.bt_more {FONT-FAMILY:微软雅黑; text-decoration: underline; color:#3D3D3D;}
+  a.bt_more:hover {FONT-FAMILY:微软雅黑; text-decoration: underline; color:#FF0000;}
+  a.bt_more:visited {FONT-FAMILY:微软雅黑; text-decoration: underline; color:#3D3D3D;}
+
+  /*整个网页超链接样式开始*/
+  a {FONT-FAMILY:微软雅黑; text-decoration: none; color:#3D3D3D;} 
+
+  
+/*超链接样式结束*/
+
+/* 自定义样式开始 */
+  /*各种颜色样式 可自行扩展*/
+  .blue{color:#406EC2; font-size: 9pt; text-decoration:underline; }
+  .blue2{color:#1b5288; font-size: 14px; text-decoration:none;font-weight:bold; }
+  .white{color:#FFFFFF; font-size: 9pt; text-decoration:none; }
+  .black2{color:#3d3d3d; font-size: 9pt; text-decoration:none; font-weight:bold; }
+  .white1{color:#FFFFFF; font-weight:bold;font-size: 14px; text-decoration:none; }
+  .red {text-decoration:underline;color:#C70506; }
+  .yellow {text-decoration:none;color:#FFB900; }
+  .green {text-decoration:underline;color:#038C54; }
+  .coffee {color:#A70404;font-size: 9pt; text-decoration:none; }
+  .purple {color:#70017A;font-size: 9pt; text-decoration:none; }
+
+  /* 四周为1象素的边框*/
+  .border1 
+  {  
+    BORDER-RIGHT: #c9c9c9 1px solid; BORDER-LEFT: #c9c9c9 1px solid; BORDER-BOTTOM: #c9c9c9 1px solid;BORDER-TOP: #c9c9c9 1px solid;background-color:#ffffff
+  }
+  .border2
+  {  
+    BORDER-RIGHT: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid;background-color:#ffffff;
+  }
+  .h1_border
+  {  
+     BORDER-LEFT: #e5e5e5 1px solid; BORDER-TOP: #e5e5e5 1px solid;background-color:#f7f7f7
+  }
+  .h2_border
+  {  
+     BORDER-LEFT: #e5e5e5 1px solid; BORDER-BOTTOM: #e5e5e5 1px solid;background-color:#f7f7f7
+  }
+  .r1_border
+  {  
+     BORDER-RIGHT: #e5e5e5 1px solid; BORDER-TOP: #e5e5e5 1px solid;background-color:#f7f7f7
+  }
+  .r2_border
+  {  
+     BORDER-RIGHT: #e5e5e5 1px solid; BORDER-BOTTOM: #e5e5e5 1px solid;background-color:#f7f7f7
+  }
+
+  /*表格背景图片不动*/
+  .bgimg{background-image:url(images/图片文件);background-repeat:no-repeat;background-position:right bottom;}
+
+  /*  一些滤镜的样式 慎用 */
+  /* Glow 扩充的阴影字 IE4.0%2B*/
+  .glow
+  {
+    FONT-SIZE: 10.5pt; 
+    filter: Glow(Color=#3D3D3D, Strength=2)
+  }   
+
+  /* Gradient 渐变 gradientType=0垂直渐变 1水平渐变默认 00完全透明  ff完全不透明 IE5.5%2B */
+  .grad
+  {
+    FONT-SIZE: 10.5pt; 
+    FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#FF0000FF,endColorStr=#00000000)
+  } 
+
+  /* AlphaImageLoader 图片平铺  scale:拉伸图片满表格 crop:显示图片自身大小并显示背景色 image:只显示图片 IE5.5%2B*/
+  .alphaimage
+  {
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(, sizingMethod='scale')
+  } 
+
+  /* Blur IE5.5%2B 模糊阴影字*/
+  .blur1
+  {
+    filter:progid:DXImageTransform.Microsoft.Blur(makeShadow=true,pixelRadius=1,shadowOpacity=0.25)
+  } 
+
+  /* Blur IE5.5%2B 模糊阴影字*/
+  .blur2
+  {
+    filter:blur(add=ture,direction=135,strength=6)
+  } 
+
+  /* DropShadow 有斜度的阴影字 IE4.0%2B */
+  .dropshadow1 
+  {
+    color: #ff0000;
+    filter: DropShadow(Color=#ffffff, OffX=1, OffY=1, Positive=1)
+  } 
+
+  /*  制作对象的阴影效果IE5.5%2B*/
+  .dropshadow2
+  {
+    filter:progid:DXImageTransform.Microsoft.DropShadow(color=#FF404040,offX=3,offY=3,positives=true)
+  }
+/* 自定义样式结束 */
+
+.lps_dh{ font-size:14px; color:#FFFFFF; font-weight:bold; font-family:&quot;微软雅黑&quot;; text-decoration:none;}
+.lps_bq1{ font-size:12px; color:#d7f0fc; font-weight:bold; font-family:&quot;微软雅黑&quot;; text-decoration:none;}
+.lps_bq2{ font-size:12px; color:#d7f0fc;font-family:&quot;微软雅黑&quot;; text-decoration:none; line-height:20px}
+.lps_lm1{ font-size:12px; color:#333333;font-family:&quot;微软雅黑&quot;; text-decoration:none;font-weight:bold; }
+
+  
+/*************************************************
+  主表格、列表区样式
+.tb_main        主表格
+.tr_main_label      主表格标签行
+.td_main_label      主表格标签格
+.tr_main_value_odd    主表格奇数列表行
+.tr_main_value_even   主表格偶数列表行
+.tr_main_value_selected 主表格选中列表行
+.td_main_value      主表格列表格
+*************************************************/
+.tb_main{
+  border:1px solid #D0D0D0;
+  spacing:1;
+  padding:1;
+  width:100%;
+}
+.tr_main_label{
+  background-image:url(http://www.rencheng.gov.cn/xxgk/jcms_files/jcms1/web1/site/picture/1/101017165957591.gif);
+  height:30px;
+  font-weight:bold;
+}
+.td_main_label{
+  border-top:1px solid #97BCE3;
+}
+.tr_main_value_odd{
+  background-color:#ffffff;
+  height:20px;
+}
+.tr_main_value_even{
+  background-color:#F9F8F3;
+  height:20px;
+}
+.tr_main_value_selected{
+  background-color:#FFFFDE;
+}
+.td_main_value{
+  border-top:1px solid #97BCE3;
+  word-break:break-all;
+}
+
+/*************************************************
+  分页样式
+.page_currpage  当前页码
+.tb_page    页码表格
+.btn_page   页码按钮
+.inp_page   页码输入框
+*************************************************/
+.page_currpage{
+  font-weight:bold;
+  color:#FF6400;
+}
+.tb_page{
+  border: 1px solid #94C3F7;
+  background-color:#EFF8FF;
+  width:100%;
+  padding:2px;
+  font-size:14px;
+}
+.btn_page{
+  cursor:hand;
+  background-color:#ffffff;
+  border:1px solid #B0CFEE;
+  vertical-align: middle;
+  font-size:12px;
+}
+.inp_page{
+  background-color:#ffffff;
+  border:1px solid #B0CFEE;
+  vertical-align: middle;
+  text-align:center;
+}
+
+.tb_title{
+  border-left: 1px solid #E0E7EB;
+  border-right: 1px solid #E0E7EB;
+  border-bottom: 1px solid #E0E7EB;
+  background-color:#F8F8F8;
+  height:28px;
+  width:100%;
+  font-size:12px;
+  padding-left:8px;
+  padding-right:8px;
+}
+
+/********当前位置样式************/
+a.currentpos{
+  text-decoration:none;
+}
+

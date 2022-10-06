@@ -1,0 +1,173 @@
+
+/* CSS Document */
+div, p, ul {
+	padding: 0;
+	margin: 0;
+}
+ul, li {
+	list-style: none;
+}
+img {
+	border: none;
+}
+a {
+	text-decoration: none;
+}
+a:link, a:visited {
+	color: #333;
+}
+a:hover, a:active {
+	color: #f00;
+}
+.clearFloat:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.clearFloat {
+	zoom: 1;
+}
+body {
+	background-color: #edece8;
+	font-family: "微软雅黑";
+}
+/*顶部区域*/
+.top {
+	width: 100%;
+	background-color: #f2f2f2;
+}
+#top {
+	width: 1100px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+}
+#top .left, #top li {
+	float: left;
+	padding:0 10px;
+	font-size: 13px;
+}
+#top .right {
+	float: right;
+	padding-right:10px;
+}
+#top .dot {
+	padding: 0;
+}
+#top .fgx {
+	padding: 0;
+}
+/*banner区域*/
+.banner {
+	width: 100%;
+	background-color: #fff;
+}
+#banner {
+	width: 1100px;
+	height: 150px;
+	margin: 0 auto;
+	position: relative;
+}
+#banner .search {
+	position: absolute;
+	top: 64px;
+	left: 802px;
+	width: 289px;
+	height: 37px;
+}
+.search .text_search {
+	float: left;
+	width: 228px;
+	height: 37px;
+	line-height: 37px;
+	padding-left: 10px;
+	background: url(../image/text_search_bg_03.gif) no-repeat;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.search .btn_search {
+	float: left;
+	width: 61px;
+	height: 37px;
+}
+/*主导航*/
+.nav {
+	width: 100%;
+	background-color: #206cba;
+}
+#nav {
+	width: 1100px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 17px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+#nav ul {
+	float: left;
+	position: relative;
+	left: 50%;
+}
+#nav li {
+	float: left;
+	position: relative;
+	left: -50%;
+	margin-right: 27px;
+}
+#nav .nomar {
+	margin-right: 0px;
+}
+#nav a {
+	display: block;
+	padding: 0 30px;
+}
+#nav a:link, #nav a:visited {
+	color: #fff;
+}
+#nav a:hover, #nav a:active {
+	color: #fff;
+	background-color: #368ee9;
+}
+/*底部信息*/
+.footer {
+	width: 100%;
+	
+}
+#footer {
+	width: 1100px;
+	height: 138px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#footer ul {
+	float: left;
+	position: relative;
+	left: 50%;
+	top: 25px;
+}
+#footer li {
+	float: left;
+	position: relative;
+	left: -50%;
+	font-size: 13px;
+	font-weight: bold;
+	color: #e0e0e0;
+}
+#footer .fgx {
+	padding: 0 10px;
+}
+#footer li a {
+	color: #e0e0e0;
+}
+#footer .copyright {
+	float: left;
+	width: 100%;
+	margin-top: 40px;
+}
+#footer .copyright p {
+	font-size: 14px;
+	color: #b1b1b1;
+	line-height: 24px;
+	text-align: center;
+}

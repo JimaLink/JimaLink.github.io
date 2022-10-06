@@ -1,0 +1,32 @@
+
+/* CSS Document */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body, a, div, p, ul li, img { margin: 0; padding: 0;  }
+body { font-family: "微软雅黑" !important;background-color:#f9f6f6; }
+a { text-decoration: none; font-family: "微软雅黑"; color: #000; }
+ul li { list-style: none; }
+.clear { clear: both; }
+ul:before, ul:after { content: ""; display: table; clear: both; }
+.top_header { background: url(../image/banner5.jpg) top center; height: 400px; }
+.top_side { width: 1200px; margin: 0 auto; }
+.top_side a { display: block; float: right; background-color: #63abeb; color: #fff; padding: 2px 10px; margin-top: 10px; font-size: 14px; margin-left:10px; }
+/*主体部分*/
+.container { width: 1200px; margin: 30px auto; }
+.con_top { margin: 30px 0; width: 100%; height: 45px; }
+.con_top a { display: block; background-color: #005bac; color: #fff; font-size: 20px; text-align: center; width: 200px; height: 45px; line-height: 45px; float: left; margin-right: 20px; }
+.con_title { background:url(../image/title1.png) no-repeat top center;height: 45px; }
+.con_title h3 { line-height: 35px; color: #005bac; margin-left: 10px; display: block; float: left; font-size: 22px; padding-left: 40px; }
+.con_one{ width:1200px; height:250px; padding:20px; background-color:#fff; margin-top:30px;}
+.con_img{ width:280px; height:200px; float:left; background-color:#f6f6f6;}
+.con_img img{ width:100%; height:100%;}
+.con_main{ float:right; width:840px;}
+.main_title{ font-size:22px; margin:10px 10px 20px 10px;}
+.main_con ul li{ float:left; width:180px; height:40px; border:1px #005bac solid; margin:10px;line-height:40px; text-align:center; position:relative; }
+.main_con ul li a{ line-height:40px; text-align:center; display:block; font-size:16px;}
+.main_con ul li ul{ display:none; width:180px; background-color:#eee;position: absolute;}
+.main_con ul li:hover ul{ display:block; z-index:1;}
+.main_con ul li ul li{ height:30px !important; line-height:30px !important; border:none; margin:0;}
+.main_con ul li ul li a{ font-size:14px; line-height:30px; display:inline-block;}
+.main_con ul li ul li:hover{ background-color:#ddd; }
+.main_con ul li ul li:hover a{color:#005bac;}
+.footer{ clear:both;}

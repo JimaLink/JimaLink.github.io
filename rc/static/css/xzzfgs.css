@@ -1,0 +1,62 @@
+
+/* CSS Document */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body, a, div, p, ul li, img { margin: 0; padding: 0; }
+body { font-family: "微软雅黑" !important; }
+a { text-decoration: none; font-family: "微软雅黑"; color: #000; }
+ul li { list-style: none; }
+.clear { clear: both; }
+ul:before, ul:after { content: ""; display: table; clear: both; }
+.top_header { background: url(../image/banner1.jpg) top center; height: 500px; position: relative; }
+.top_side { width: 1200px; margin: 0 auto; }
+.top_side a { display: block; float: right; background-color: #9A1013; color: #fff; padding: 2px 10px; margin-top: 10px; font-size: 14px; margin-left:10px; }
+.top_box{ width: 300px; background-color: #9A1013; position: absolute; bottom: 70px; left: 42%;}
+.top_box a{ display: block; color: #FFFFFF; padding: 10px; font-size: 18px; font-weight: bold; text-align: center;}
+.container { width: 1200px; margin: 30px auto; }
+/*区级公示*/
+.con_one { margin-bottom: 20px; }
+.con_one ul li { float: left; margin-left: 33px; }
+.con_one ul li:first-child { margin-left: 0; }
+/*事前公示*/
+.con_sq { margin: 40px 0; }
+.sq_title { background: url(../image/title.jpg) top center; height: 50px; color: #af0303; font-size: 24px; padding-left: 50px; font-weight: bold; padding-top: 4px; }
+.sq_con { margin-top: 30px; }
+.sq_con ul li { float: left; width: 277px; height: 150px; padding-top: 20px; background-color: #f8f6f6; margin-left: 30px; margin-bottom:20px; }
+.sq_con ul li:nth-child(1),.sq_con ul li:nth-child(5) { margin-left: 0; }
+.sq_con ul li a{ display:block;}
+.sq_img { width: 277px; height: 70px; }
+.sq_img img { height: 70px; width: auto; display: block; margin: 0 auto; }
+.sq_con ul li a p { font-size: 18px; text-align: center; margin-top: 20px; color: #444; }
+/*事中公示*/
+.con_sz { margin-top: 40px; }
+.sz_title { background: url(../image/title.jpg) top center; height: 50px; color: #af0303; font-size: 24px; padding-left: 50px; font-weight: bold; padding-top: 4px; }
+.sz_con { margin-top: 30px; }
+.sz_con ul li { float: left; width: 380px; height: 120px; padding: 20px; background-color: #f8f6f6; margin-left: 30px; }
+.sz_con ul li:first-child { margin-left: 0; }
+.sz_img { width: 100px; float: left; }
+.sz_img img { height: 80px; }
+.sz_con ul li a p { font-size: 24px; line-height: 80px; color: #444; }
+/*事后公示*/
+.con_sh { margin-top: 40px; }
+.sh_title { background: url(../image/title.jpg) top center; height: 50px; color: #af0303; font-size: 24px; padding-left: 50px; font-weight: bold; padding-top: 4px; }
+.sh_con { margin: 20px 0 40px 0; }
+.tab_tit ul li { float: left; height: 50px; line-height: 40px; margin: 0 10px; }
+.tab_tit ul li a { font-size: 16px; }
+.tab_tit ul li.on { background: url(../image/hover.png) no-repeat bottom center; }
+.tab_tit ul li.on a { color: #af0303; }
+.tab_con ul { margin-top: 15px; }
+.tab_con ul li { height: 40px; line-height: 40px; padding: 0 10px; }
+.tab_con ul li:nth-child(odd) { background-color: #fbd8d8; }
+.tab_con ul li a { font-size: 15px; }
+.tab_con ul li span { display: block; float: right; color: #999; }
+/*其他公示*/
+.sh_qt { }
+.sh_qt ul li { float: left; width: 300px; height: 100px; background-color: #F60; margin-right: 30px; }
+/*行政执法部门*/
+.con_bottom { background-color: #f9f6f6; margin-top: 40px; padding: 20px 0; }
+.bot_main { width: 1200px; margin: 0 auto; }
+.bot_title { background: url(../image/title2.png) top center; height: 50px; color: #af0303; font-size: 24px; padding-left: 50px; font-weight: bold; padding-top: 4px; }
+.bot_con { margin-top: 30px; }
+.bot_con ul li { float: left; width: 180px; height: 40px; background-color: #fff; margin-right: 20px; margin-bottom: 15px; line-height: 40px; text-align: center; }
+/*底部*/
+.footer { clear: both; }

@@ -1,0 +1,329 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+a:focus{outline:none;}
+#jquery_jplayer{display:none !important;}
+.cont{
+	width:1200px;
+	margin: auto;
+	margin-top: 17px;
+}
+.cont1{
+	overflow: hidden;
+}
+.cont1_left{
+	width: 590px;
+	height: 356px;
+	float: left;
+}
+.cont1_right{
+	width: 590px;
+	height: 356px;
+	float: right;
+}
+.cont1_title{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #cccccc;
+}
+.title_txt{
+	float: left;
+	height: 30px;
+	border-bottom: 2px solid #e32525;
+}
+.title1>div{
+	margin-right: 10px;
+	float: left;
+}
+.title1>div>a{
+	color: #e32525;
+	font-size: 19px;
+}
+.title_txt>a{
+	color: #e32525;
+	font-weight: bold;
+	font-size: 19px;
+}
+.title_txt>a:hover{
+	color: #e32525;
+}
+.title_more{
+	float: right;
+	margin-top: 5px;
+}
+.cont1_list{
+	width: 100%;
+}
+.cont1_list>div{
+	line-height:40px;
+	overflow: hidden;
+    height: 40px;
+	border-bottom: 1px dashed #bfbfbf;    width: 100%;
+}
+.cont1_list>div>div{
+	float: left;
+	line-height: 35px;
+}
+.cont1_list>div>div>a{
+	font-size: 15px;
+	color: #333333;    display: block;
+    width: 500px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cont1_list>div>p{
+	float: right;
+	font-size: 15px;
+	color: #999999;
+}
+.list_dian{
+	line-height:35px !important;
+}
+.list_txt{
+	margin-left: 10px;
+}
+.list_txt>a{
+	color: #333333;
+	font-size: 15px;
+}
+.cont2{
+	height: 67px;
+	width:1200px;
+	margin-top: 25px;
+	overflow: hidden;
+	position: relative;
+}
+.cont3{
+	width: 1200px;
+	margin: auto;
+	margin-top: 30px;
+	overflow: hidden;
+}
+.cont3_left{
+	float: left;
+	width: 580px;
+	overflow: hidden;
+}
+.cont3_center{
+	width: 1px;
+	background: #ededed;
+	height: 278px;
+	float: left;
+	margin-left:18px;
+	margin-top: 35px;
+}
+.cont3_right{
+	float: right;
+	width: 580px;
+	overflow: hidden;
+}
+.cont4{
+	width: 1200px;
+	height: 64px;
+	margin: auto;
+	margin-top: 25px;
+}
+.cont4>img{
+	width: 100%;
+	height: 100%;
+}
+.cont5{
+	margin-top: 30px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.lianjie{
+	width: 1200px;
+	height: 38px;
+	margin: auto;
+	border-bottom: 1px solid #e2e2e2;
+	margin-bottom: 20px;
+}
+.lianjie>div{
+	float: left;
+	line-height: 38px;
+	font-size: 13px;
+	color: #000000;
+	margin-right: 10px;
+}
+.lianjie>div>a{
+	color: #434343;
+	font-size: 13px;
+}
+.title2>div{
+	margin-right: 10px;
+	float: left;
+}
+.title2>div>a{
+	color: #e32525;
+	font-size: 19px;
+}
+.title3>div{
+	margin-right: 10px;
+	float: left;
+}
+.title3>div>a{
+	color: #e32525;
+	font-size: 19px;
+}
+.title4>div{
+	margin-right: 10px;
+	float: left;
+}
+.title4>div>a{
+	color: #e32525;
+	font-size: 19px;
+}
+.title5>div{
+	margin-right: 10px;
+	float: left;
+}
+.title5>div>a{
+	color: #e32525;
+	font-size: 19px;
+}
+.title6>div{
+	margin-right: 10px;
+	float: left;
+}
+.title6>div>a{
+	color: #e32525;
+	font-size: 19px;
+}
+.cont6{
+	overflow: hidden;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.cont7{ width: 100%;margin-top: 30px;
+	margin-bottom: 20px;}
+.cont7_title{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #cccccc;
+}
+.cont7_list{
+	width: 100%;
+}
+.cont7_list>div{
+	line-height:40px;
+	overflow: hidden;
+    height: 40px;
+	border-bottom: 1px dashed #bfbfbf;
+	width: 48%;
+	float: left;
+}
+.cont7_list>div:nth-child(odd){
+	margin-right: 48px;
+}
+.cont7_list>div>div{
+	float: left;
+	line-height: 35px;
+}
+.cont7_list>div>div>a{
+	font-size: 15px;
+	color: #333333;    display: block;
+    width: 500px;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cont7_list>div>p{
+	float: right;
+	font-size: 15px;
+	color: #999999;
+}
+.clear{ clear: both;}
+/* 滚动 */
+.rollBox {
+      /* padding: 20px 15px; */
+      height: 67px;
+      position: relative;
+      width: 1200px;
+	  margin: auto;
+      background: #ffffff;
+      /* margin-top: 30px; */
+    }
+  
+    .rollBox .LeftBotton {
+      height: 67px;
+      width: 30px;
+      background: url(../image/zt-bg-left.png) no-repeat center;
+      overflow: hidden;
+      float: left;
+      display: inline;
+      margin: 0px 5px 0px 0px;
+      cursor: pointer;
+    }
+    
+    .rollBox .RightBotton {
+      height: 67px;
+      width: 30px;
+      background: url(../image/zt-bg-left.png) no-repeat center;
+      overflow: hidden;
+      float: right;
+      display: inline;
+      margin: 0px 0px 0px 5px;
+      cursor: pointer;
+    }
+  
+    .rollBox .Cont {
+      width: 1130px;
+      overflow: hidden;
+      float: left;
+      padding: 0px 0px;
+      margin-left: 0px;
+    }
+  
+    .rollBox .ScrCont {
+      width: 100000px;
+    }
+  
+    .rollBox .Cont .pic {
+      width: 262px;
+      float: left;
+      text-align: center;
+      padding: 0 4px;
+    }
+  
+    .rollBox .Cont img{
+      width: 263px;
+      height: 67px;
+    }
+    .rollBox .Cont .pic img {
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .rollBox .Cont .pic a {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .rollBox .Cont .pic a:hover {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .rollBox #List1,
+    .rollBox #List2 {
+      float: left;
+    }
+  
+    .cpt1 {
+      font-size: 14px;
+      color: #6a6a6a;
+      line-height: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+    }

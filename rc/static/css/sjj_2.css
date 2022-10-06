@@ -1,0 +1,365 @@
+/* CSS Document */
+
+body,div,p,ul,li,span,a{
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size:15px;
+	font-family:'Microsoft YaHei';
+	  text-decoration: none;
+}
+body{
+	background:#f4f4f4;
+}
+/*banner����*/
+.banner{
+	background:url(../image/tw_top_bg_2.jpg) repeat-x;
+	overflow:hidden;
+}
+.banner .bannercon{
+	height:194px;
+	width:1200px;
+	margin:0 auto;
+}
+.gsj-box{
+	width:1200px;
+	margin:0 auto;
+	margin-top:10px;
+	background:#ffffff;
+}
+.wrapper-box{
+	width:1180px;
+	margin:0 auto;
+}
+/*nav����*/
+.lg_out{
+	background:#e6271d;
+}
+.logo-box{
+	height:35px;
+	width:1200px;
+	margin:0 auto;
+}
+.logo-box-ul{
+	height:35px;
+	width:1200px;
+}
+.logo-box-li1{
+	width:181.5px;
+	height:35px;
+	float:left;
+	font-size:15px;
+	font-family:'Microsoft YaHei';
+	color:white;
+	text-align:center;
+	line-height:35px;
+}
+.logo-box-li1:hover{
+	background:#e5291e;
+}
+.logo-box-li2{
+	width:2px;
+	height:16px;
+	float:left;
+	background:url(../image/nav-bj_03_2.jpg);
+	margin-top:9px;
+}
+/*ʱ������*/
+.time-box{
+	height:48px;
+	width:1180px;
+}
+.time{
+	width:300px;
+	height:48px;
+	float:left;
+	font-size:13px;
+	color:#333333;
+	font-family:'Microsoft YaHei';
+	line-height:48px;
+}
+.sousuo{
+	float:right;
+}
+.sousuo input{
+	width:175px;
+	height:22px;
+	border:1px solid #d2d2d2;
+	float:left;
+	margin-right:10px;
+	margin-top:11px;
+}
+.sousuo-tb{
+	float:right;
+	width:55px;
+	height:22px;
+	background:url(../image/jstb_03_2.jpg);
+	margin-top:13px;
+}
+/*��һ����*/
+.gsj-first{
+	height:327px;
+	width:1180px;
+}
+.tpxw{
+	float:left;
+	height:327px;
+	width:714px;
+}
+/*����Ҫ��*/
+.bmyw-box{
+	height:327px;
+	width:365px;
+	float:left;
+	margin-left:1px;
+}
+.bmyw-title{
+	height:36px;
+	margin-left:10px;
+	width:455px;
+	border-bottom:1px solid #d6d6d6;
+}
+.bmyw-title-font{
+	color:#e6271d;
+	font-size:15px;
+	font-weight:bold;
+	float:left;
+	line-height:37px;
+	padding-right:3px;
+	padding-left:8px;
+	font-family:'Microsoft YaHei';
+}
+.gengduo{
+	font-size:15px;
+	color:#333333;
+	float:right;
+	line-height:37px;
+	font-family:'Microsoft YaHei';
+}
+.gengduo1{
+	font-size:15px;
+	color:#333333;
+	float:right;
+	line-height:34px;
+	font-family:'Microsoft YaHei';
+}
+.bmyw-list-box{
+	width:455px;
+	margin-left:10px;
+	height:290px;
+}
+.bmyw-list-ul{
+	width:455px;
+	height:290px;
+}
+.bmyw-list-ul li{
+	width:455px;
+	border-bottom:1px dashed #adadad;
+}
+.bmyw-list-nr{
+	color:#333333;
+	margin-left:10px;
+	width:445px;
+	line-height:28px;
+	font-size:15px;
+	font-family:'Microsoft YaHei';
+}
+.bmyw-list-nr:hover{
+	color:#e5291e;
+}
+.second{
+	width:1178px;
+	height:96px;
+	border:1px solid #e3e3e3;
+	margin-top:10px;
+}
+.second-tp{
+	width:1157px;
+	height:76px;
+	margin:0 auto;
+	margin-top:10px;
+}
+.second-tp>img{width: 100%;}
+/*��������*/
+.third{
+	width:1178px;
+	height:217px;
+	border:1px solid #ececec;
+	margin-top:10px;
+}
+.gsj-zxxx{
+	width:1158px;
+	height:217px;
+	margin:0 auto;
+}
+.gsj-zxxx-title{
+	width:1158px;
+	height:34px;
+	border-bottom:1px solid #ececec;
+}
+.gsj-zxxx-title-font{
+	padding-right:3px;
+	font-size:15px;
+	line-height:34px;
+	font-weight:bold;
+	font-family:'Microsoft YaHei';
+	padding-left:8px;
+	color:#e5291d;
+	float:left;
+}
+.gsj-zxxx-list{
+	height:182px;
+	width:1158px;
+}
+.gsj-zxxx-list-title{
+	height:27px;
+	width:1158px;
+	overflow:hidden;
+}
+.list-title-font{
+	padding:0 5px; 
+	height:27px;
+	float:left;
+	font-size:15px;
+	font-family:'Microsoft YaHei';
+	color:#333333;
+	line-height:30px;
+	text-align:center;
+}
+.list-title-font:hover{
+	color:#e5291e;
+}
+.shuxian{
+	margin-top:9px;
+	background:url(../image/shuxian_03_2.jpg);
+	height:14px;
+	width:1px;
+	float:left;
+}
+.gsj-zxxx-list-news{
+	height:154px;
+	width:1180px;
+	float:left;
+}
+.zxxx-ul{
+	height:154px;
+	width:1140px;
+}
+.zxxx-ul li{
+	height:30px;
+	width:510px;
+	float:left;
+	margin-left:10px;
+}
+.dian-qz{
+	height:3px;
+	width:3px;
+	background:url(../image/qz_03_2.jpg);
+	float:left;
+	margin-top:15px;
+	margin-left:9px;
+}
+.new-font{
+	color:#333333;
+	font-size:15px;
+	font-family:'Microsoft YaHei';
+	line-height:30px;
+	float:left;
+	margin-left:10px;
+}
+.new-font:hover{
+	color:#e5291e;
+}
+.news-time{
+	font-size:15px;
+	font-family:'Microsoft YaHei';
+	line-height:30px;
+	color:#858585;
+	float:right;
+}
+/*��������*/
+.yqlj{
+	
+	height:38px;
+	width:1180px;
+	border: 1px solid #e2e2e2;
+	margin:0 auto;
+	margin-top:10px;
+}
+.ul-lj{
+	width:455px;
+	height:38px;
+}
+.ul-lj li{
+	float:left;
+	margin-left:13px;
+	font-size:13px;
+	font-family:'Microsoft YaHei';
+	line-height:38px;
+}
+.li-lj a{
+	font-size:13px;
+	color:#323232;
+	line-height:38px;
+}
+.li-lj a:hover{
+	color:#e5291e;
+}
+.gengduo:hover{
+	color:#e5291e;
+}
+.lj-bj{
+	width:2px;
+	height:14px;
+	background:url(../image/yqlj_03_2.jpg);
+	background-repeat:no-repeat;
+	margin-top:12px;
+}
+.banquan{
+	height:111px;
+	width:1200px;
+	margin:0 auto;
+}
+.banquan-box{
+	height:111px;
+	width:1200px;
+	position:relative;
+}
+.p1{
+	width:1200px;
+	float:left;
+	height:80px;
+	margin-top:30px;
+}
+.p2{
+	font-size:13px;
+	text-align:center;
+	color:#333333;
+	font-family:'Microsoft YaHei';
+}
+.banquan-logo{
+	background:url(../image/banquan-logo_03_2.jpg);
+	height:63px;
+	width:52px;
+	position:absolute;
+	left:146px;
+	top:20px;
+	
+}
+
+
+.ewm{
+	height:250px;
+	width:120px;
+	position:fixed;
+	top:249px;
+	right:0;
+}
+.ewm p{
+	height:10px;
+	line-height:10px; 
+	position:absolute;
+	top:-12px;
+	right:0;
+	cursor:pointer;
+}

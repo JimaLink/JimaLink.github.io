@@ -1,0 +1,160 @@
+
+/**************************************public*****************/
+
+ .wip_local {
+    width: 1200px;
+    margin: 0px auto 25px;
+    background: #ededed url(../image/local_png.png) no-repeat 24px center;
+    line-height: 40px;
+    height: 40px;
+    color: #454545;
+    font-size: 13px;
+    padding-left: 45px;
+  }
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+
+
+/*页脚区结束*/
+
+/* CSS Document */
+*{margin: 0; padding: 0;font-family:"Microsoft YaHei" !important;}
+a:hover{text-decoration:none !important;}
+a:focus{outline:none;}
+.dqwz_ty_box{width: 100%;height: 40px; line-height: 40px;background-color: #ededed;display:none;}
+.dqwz_ty {
+	width:1200px;
+	height:40px;
+	line-height:40px;
+	margin:0 auto;
+	text-align:left;
+	font-size:13px;
+	/*background:url(dqwz_pic.png) no-repeat 0 14px;*/
+	background-color: #e9e9e9;
+}
+.dqwz_ty span {
+	line-height:40px;
+	float:left;
+	font-size:13px;
+	padding:0 5px 0 25px;
+	
+}
+.dqwz_ty img {
+	margin:0 5px 0 0
+}
+/*jrobot*/
+.main_jrobot{width: 100%;height: auto; margin: 0 auto;}
+.main_jrobot .part_1{width: 100%;height:165px; background: url(http://www.rencheng.gov.cn/images/1254/pic1.png) top center no-repeat; background-color: #5a8bc6;}
+.main_jrobot .part_2{width: 100%;height:57px; background: url(http://www.rencheng.gov.cn/images/1254/pic2.png) top center no-repeat; background-color: #f2f2f2;}
+.main_jrobot .part_3{width: 1200px;height:auto; margin: 0 auto;}
+
+/*访谈*/
+.ft_box{width: 100%;height: auto; margin: 0 auto;}
+.ft_main{width: 1200px;height:auto; margin: 0 auto; margin-top: 30px;margin-bottom:30px;    overflow: hidden;}
+
+/*add*/
+.ft_main_left{
+	width:310px;
+	background-color:#F7F7F7;    padding: 0 20px 0 20px;padding-bottom:9999px;margin-bottom:-9999px;
+	
+	}
+.ft_main_left h2{
+	    color: #BB2335;
+    font-size: 22px;
+    background: url(../image/1909101914324036414.jpg) no-repeat 0;
+    padding-left: 35px;
+    height: 55px;
+    font-weight: normal;
+    float: left;
+    margin-left:5px;
+    line-height: 55px;
+    font-size: 20px;
+    color: #bb2335;}
+
+.xxgk-zp h3{
+	width:265px;
+	height:40px;
+	line-height:40px;
+	background-image:url(http://www.rencheng.gov.cn/images/1254/ztfl.png);
+	background-position:240px center;
+	background-repeat:no-repeat;
+	background-color:#355e92;
+	font-size:17px;
+	color:#fff;
+	font-weight:normal;
+	padding-left:20px;
+	}
+.xxgk-zt h3{
+	width:250px;
+    height: 40px;
+       font-weight: normal;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding-left: 5px;
+	}
+.xxgk-tc h3{
+	width:270px;
+	height:40px;
+	line-height:40px;
+	background-image:url(http://www.rencheng.gov.cn/images/1254/ztfl2.png);
+	background-position:240px center;
+	background-repeat:no-repeat;
+	background-color:#355e92;
+	font-size:17px;
+	color:#fff;
+	font-weight:normal;
+	padding-left:20px;
+	}
+.xxgk-zt-content,.xxgk-tc-content,.xxgk-zp-content{
+	width:270px;
+	height:650px;
+	border:1px solid #d6d6d6;
+	background-color:#fff;
+	padding:5px;
+	}
+.ft_main_right,.xxlb-zp,.xxlb-zt,.xxlb-tc{
+	width:865px;
+	
+	overflow:hidden;
+	}
+.xxgk-kj{
+	margin-top:10px;
+	}
+.xxgk-kj div{
+	width:264px;
+	height:50px;
+	background:url(http://www.rencheng.gov.cn/images/1254/xxgk_kj.png) 0 center no-repeat;
+	margin-top:20px;
+	}
+.xxgk-kj div a{
+	display:block;
+	width:264px;
+	height:50px;
+	line-height:50px;
+	color:#333333;
+	padding-left:20px;
+	}
+.xxgk-kj div a img{
+	margin-top:10px;
+	margin-right:25px;
+	float:left;
+	}
+.xxgk-kj div a span{
+	float:left;
+	height:50px;
+	line-height:50px;
+	}
+.xxgk-kj div a:hover{
+	color:#355e92;
+	}
+
+
+#one1{background-color: #355e92;}
+
+
+

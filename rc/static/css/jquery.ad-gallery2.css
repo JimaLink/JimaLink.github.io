@@ -1,0 +1,193 @@
+
+.ad-thumb-list img{height: 90px !important; width: 126px !important;margin:0 5px;}
+.clear{clear: both; content: ""; visibility: hidden;height: 0;}
+#gallery {
+    padding:20px;background: #f0f0f0;
+  }
+
+#container{width:920px; margin:0px auto;}
+.ad-gallery {
+  width: 920px;
+}
+.ad-gallery, .ad-gallery * {
+  margin: 0;
+  padding: 0;
+  line-height:150%
+}
+.ad-image-wrapper {
+    width: 100%;
+    height: 540px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+.ad-image-wrapper .ad-loader {
+	width:78px;height:8px;
+	background:url(../image/loading.gif) no-repeat;
+      position: absolute;
+      z-index: 10;
+      top: 40%;
+      left: 48%;
+      border: 1px solid #CCC;
+    }
+.ad-image-wrapper .ad-next {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 45%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+.ad-image-wrapper .ad-prev {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 45%;
+      height: 100%;
+      cursor: pointer;
+      display: block;
+      z-index: 100;
+    }
+.ad-image-wrapper .ad-prev, .ad-image-wrapper .ad-next {
+      /* Or else IE will hide it */
+      background: url(http://www.rencheng.gov.cn/module/jslib/grouppic/non-existing.jpg)\9
+    }
+.ad-image-wrapper .ad-prev .ad-prev-image, .ad-image-wrapper .ad-next .ad-next-image {
+        background: url(../image/ad_prev.png);
+        width: 30px;
+        height: 30px;
+        display: none;
+        position: absolute;
+        top: 47%;
+        left: 0;
+        z-index: 101;
+      }
+.ad-image-wrapper .ad-next .ad-next-image {
+        background: url(../image/ad_next.png);
+        width: 30px;
+        height: 30px;
+        right: 0;
+        left: auto;
+      }
+.ad-image-wrapper .ad-image {
+      position: absolute;
+      overflow:;
+	  width:880px !important;
+	  height:540px !important;
+      top: 0 !important;
+      left: 0 !important;
+	  text-align:center;
+
+      z-index: 9;
+    }
+.ad-image-wrapper .ad-image a img {
+       margin:0 auto;
+        border: 0;
+      }
+.ad-image img {margin:0 auto;border: 0;}
+.ad-image-wrapper .ad-image .ad-image-description {
+        position: absolute;
+        bottom:0px;
+        left: 0px;
+        padding: 8px;
+		min-height:89px;
+        text-align: left;
+		text-indent:2em;
+		font-size:16px;
+		line-height:25px;
+        width:880px !important;
+        z-index: 2;
+		overflow:hidden;box-sizing: border-box;
+        background:url(../image/opa75.png);
+        color: #000;
+      }
+* html .ad-image-wrapper .ad-image .ad-image-description {
+        background: none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (enabled=true, sizingMethod=scale, src='../image/opa75.png');
+      }
+.ad-image-wrapper .ad-image .ad-image-description .ad-description-title {
+          display: block;overflow:hidden;max-height:524px;
+        }
+.ad-controls {
+    height: 20px; line-height:20px; padding-bottom:10px; padding-top:5px;
+  }
+ .ad-info {
+      float: left;
+    }
+.ad-slideshow-controls {
+      float: right;
+    }
+.ad-slideshow-controls .ad-slideshow-start, .ad-gallery .ad-slideshow-controls .ad-slideshow-stop {
+        padding-left: 5px;
+        cursor: pointer;
+      }
+.ad-slideshow-controls .ad-slideshow-countdown {
+        padding-left: 5px;
+        font-size: 0.9em;
+      }
+.ad-slideshow-running .ad-slideshow-start {
+      cursor: default;
+      font-style: italic;
+    }
+.ad-nav {
+    width: 580px;
+	height:109px;
+    position: relative;
+  }
+.ad-forward, .ad-back {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    /* IE 6 doesn't like height: 100% */
+    * html .ad-forward, .ad-back {
+      height: 100px;
+    }
+    .ad-back {
+      cursor: pointer;
+      left:3px ; 
+	  top:20px;
+      width: 13px;
+      display: block;
+      background: url(../image/ad_scroll_back.png) 0px 22px no-repeat;
+    }
+    .ad-forward {
+      cursor: pointer;
+      display: block;
+      width: 13px;
+	  right:-35px ; top:20px;
+      background: url(../image/ad_scroll_forward.png) 0px 22px no-repeat;
+    }
+    .ad-nav .ad-thumbs {
+	position:relative;
+	overflow: hidden;
+    width:840px;top:10px;margin-left:20px;
+    }
+     .ad-thumbs .ad-thumb-list {
+        float: left;
+        width: 2000px !important;
+        list-style: none;
+      }
+      .ad-thumbs li {
+          float: left;
+          padding-right: 5px;
+        }
+       .ad-thumbs li a {
+            display: block;
+          }
+        .ad-thumbs li a img {
+              border: 3px solid #CCC;
+              display: block;
+            }
+        .ad-thumbs li a.ad-active img {
+              border: 3px solid #616161;
+            }
+/* Can't do display none, since Opera won't load the images then */
+.ad-preloads {
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
