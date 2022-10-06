@@ -1,0 +1,42 @@
+/**
+ * Created by wangchjin on 2018/5/22.
+ */
+document.writeln("<style>");
+document.writeln(".logo{");
+document.writeln("	width:1200px;");
+document.writeln("}");
+document.writeln(".ul1{");
+document.writeln("	width:1200px;");
+document.writeln("	height:45px;");
+document.writeln("}");
+document.writeln(".ul1 li{");
+document.writeln("	width:130px;");
+document.writeln("	height:45px;");
+document.writeln("	float:left;");
+document.writeln("}");
+document.writeln(".ul1 li a{");
+document.writeln("	text-decoration:none;");
+document.writeln("	color:white;");
+document.writeln("	font-size:17px;");
+document.writeln("	font-family:\'Microsoft YaHei\';");
+document.writeln("	display:block;");
+document.writeln("	height:45px;");
+document.writeln("	width:118px;");
+document.writeln("	text-align:center;");
+document.writeln("	line-height:46px;");
+document.writeln("}");
+document.writeln(".ul1 li a:hover{");
+document.writeln("	background:#0099FF;");
+document.writeln("}");
+document.writeln("</style>");
+document.writeln("<ul class=\"ul1\">");
+document.writeln("	<li style=\"margin-left:10px;\"><a href=\"/jt/\">首页</a></li>");
+document.writeln("	<li><a href=\"/col/col34658/index.html?number=RCA0148\">教体资讯</a></li>");
+document.writeln("	<li><a href=\"/col/col34659/index.html?number=RCA0105\">通知公告</a></li>");
+document.writeln("	<li><a href=\"/col/col34660/index.html?number=RCA0106\">政策法规</a></li>");
+document.writeln("	<li><a href=\"/col/col34662/index.html?number=RCA0150\">公众服务</a></li>");
+document.writeln("	<li><a href=\"http://www.rencheng.gov.cn/col/col34663/index.html?number=RCA0151\">专题专栏</a></li>");
+document.writeln("	<li style=\"width:136px;\"><a href=\"/col/col38833/index.html?number=RCA01B1\">教学教研</a></li>");
+document.writeln("	<li><a href=\"http://jirczwfw.sd.gov.cn/jnzwdt/epointzwmhwz/pages/default/index\" target=\"_blank\">政务服务</a></li>");
+document.writeln("    <li><a href=\"/index.html\">中国任城</a></li>");
+document.writeln("</ul>");

@@ -1,0 +1,14 @@
+document.writeln("<table align=\"center\" width=\"770\" ergodic=\"view\">");
+document.writeln("	<tr>");
+document.writeln("		<td colspan=\"3\" height=\"30\"></td>");
+document.writeln("	</tr>");
+document.writeln("	<tr>");
+document.writeln("		<td width=\"43\"></td>");
+document.writeln("		<td>");
+document.writeln("			<p style=\"text-align:center;font-size:13px;color:#414141;\">中共济宁任城区委版权所有 <br />Copyright");
+document.writeln("				© 2014 - 2017 All Rights Reserved 备案序号：鲁ICP备05022544号 鲁公网安备 37081102000009号<br>政府网站标识码：3708110001</p>");
+document.writeln("		</td>");
+document.writeln("		<td style=\"display:none\"><a href=\"#\" target=\"_blank\" style=\"background:url(/picture/0/1909172316570352336.jpg);display:inline-block;width:43px;height:51px;\"></a></td>");
+document.writeln("	</tr>");
+document.writeln("</table>");
+document.writeln("");
