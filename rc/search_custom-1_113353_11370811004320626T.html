@@ -1,0 +1,203 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="static/css/xxgk.css" type="text/css" rel="stylesheet">
+
+
+<table width="100%" align="center">
+<tr>
+	<td>
+		 <form id="searchform" name="searchform" action="" method="post">
+		 	<input type="hidden" name="infotypeId" id="infotypeId" value=",1,">
+		 	<input type="hidden" name="jdid" id="jdid" value="123">
+		 	<input type="hidden" name="area" id="area" value="11370811004320626T">
+		 	<input type="hidden" name="fields" id="fields" value="">
+		 	<input type="hidden" name="fieldConfigId" id="fieldConfigId" value="113353">
+		 	<input type="hidden" name="hasNoPages" id="hasNoPages" value="1">
+		 	<input type="hidden" name="infoCount" id="infoCount" value="8">
+		 	<input type="hidden" name="sortfield" id="sortfield" value="compaltedate:0,createdatetime:0">
+			
+		</form>
+		
+
+<div class="" style="width:100%;line-height:40px;overflow:hidden;">
+						<div class="list_img"><img src="static/picture/d8b8b49dc18f4c349eceb0d1debc6784.jpg"></div>
+						<div class="list_txt"><a href="javascript:window.open('http://www.rencheng.gov.cn/art/2022/5/26/art_77359_2744944.html?xxgkhide=1');" target="_blank" title="关于《济宁市任城区交通运输局“信用交通”创建工作方案》的解读">关于《济宁市任城区交通运输局“信...</a></div>
+						<p style="float:right;margin:0;">2022-05-26</p>
+					</div>
+
+
+
+<div class="" style="width:100%;line-height:40px;overflow:hidden;">
+						<div class="list_img"><img src="static/picture/d8b8b49dc18f4c349eceb0d1debc6784.jpg"></div>
+						<div class="list_txt"><a href="javascript:window.open('http://www.rencheng.gov.cn/art/2022/5/26/art_77359_2744943.html?xxgkhide=1');" target="_blank" title="济宁市任城区交通运输局“信用交通“创建工作方案">济宁市任城区交通运输局“信用交通...</a></div>
+						<p style="float:right;margin:0;">2022-05-26</p>
+					</div>
+
+
+<style>
+
+.list_img{line-height:35px;float: left;margin-left: 10px;margin-top:18px;}
+.list_txt{float: left;margin-left: 10px;}
+</style>
+		
+		
+	</td>
+</tr>
+</table>
+<script language="javaScript">
+function isNumber(str,flag){
+	var b = false;
+	for (var i=0; i<str.length; i++)
+	{
+		if (str.substring(i,i+1)<'0' || str.substring(i,i+1)>'9')
+		{
+			b = true;
+			if (flag)
+			{
+				if (str.substring(i,i+1)!="-" && str.substring(i,i+1)!=" " && str.substring(i,i+1)!=":" && str.substring(i,i+1)!=";")	
+					break;
+				else
+					b = false;
+			}
+		}
+	}
+	return b;
+}
+	function funSearch( searchurl ){
+		searchform.action = searchurl;
+		searchform.submit();
+	}
+	function funGo( url ){
+		if ( isNumber(document.pageForm.currpage.value,false) )
+		{
+			alert("页码必须为数字，请确认！");
+			document.pageForm.currpage.focus();
+			return;
+		}
+		var title = "";
+		var vc_number = "";
+		var fileNumber = "";
+		var vc_all = "";
+		var texttype = "";
+		var fbtime = "";
+		var sortfield = "";
+		var c_issuetime = "";
+		var binlay = "";
+		if( document.searchform ){
+			if( document.all.vc_title )
+				title = document.all.vc_title.value;
+			
+			if( document.all.vc_number ){
+				vc_number = document.all.vc_number.value;
+			}
+			if(document.all.vc_filenumber){
+				fileNumber = document.all.vc_filenumber.value;
+			}
+			if(document.all.vc_all){
+				vc_all = document.all.vc_all.value;
+			}
+			if(document.all.texttype){
+				texttype = document.all.texttype.value;
+			}
+			if(document.all.fbtime){
+				fbtime = document.all.fbtime.value;
+			}
+			if(document.all.sortfield){
+				sortfield = document.all.sortfield.value;
+			}
+			if( document.all.c_issuetime ){
+				c_issuetime = document.all.c_issuetime.value;
+			}
+		}
+			
+		var currpage = document.pageForm.currpage.value;
+		var npot = url.indexOf("?");
+		var page = url;
+		if( npot == -1 ){
+			page += "?";
+		}else{
+			page += "&";
+		}
+		page += "sortfield="+encodeURI(sortfield)+"&fbtime="+encodeURI(fbtime)+"&texttype="+encodeURI(texttype)+"&vc_all="+encodeURI(vc_all)+"&vc_filenumber="+encodeURI(fileNumber)+"&vc_title="+encodeURI(title)
+        + "&vc_number=" + encodeURI(vc_number) + "&currpage="+currpage
+	     + "&binlay="+binlay
+	     + "&c_issuetime=" + c_issuetime;
+		searchform.action = page;
+		searchform.submit();	
+	}
+	function funGoPage( url,pageid ){
+	
+		var title = "";
+		var vc_number = "";
+		var fileNumber = "";
+		var vc_all = "";
+		var texttype = "";
+		var fbtime = "";
+		var sortfield = "";
+		var c_issuetime = "";
+		var binlay = "";
+		if( document.searchform ){
+			if( document.all.vc_title )
+				title = document.all.vc_title.value;
+			
+			if( document.all.vc_number ){
+				vc_number = document.all.vc_number.value;
+			}
+			if(document.all.vc_filenumber){
+				fileNumber = document.all.vc_filenumber.value;
+			}
+			if(document.all.vc_all){
+				vc_all = document.all.vc_all.value;
+			}
+			if(document.all.texttype){
+				texttype = document.all.texttype.value;
+			}
+			if(document.all.fbtime){
+				fbtime = document.all.fbtime.value;
+			}
+			if(document.all.sortfield){
+				sortfield = document.all.sortfield.value;
+			}
+			if( document.all.c_issuetime ){
+				c_issuetime = document.all.c_issuetime.value;
+			}		
+				
+		}
+			
+		var currpage = pageid;
+		var npot = url.indexOf("?");
+		var page = url;
+		if( npot == -1 ){
+			page += "?";
+		}else{
+			page += "&";
+		}
+		 page += "sortfield="+encodeURI(sortfield)+"&fbtime="+encodeURI(fbtime)+"&texttype="+encodeURI(texttype)+"&vc_all="+encodeURI(vc_all)+"&vc_filenumber="+encodeURI(fileNumber)+"&vc_title="+encodeURI(title)
+		         + "&vc_number=" + encodeURI(vc_number) + "&currpage="+currpage
+			     + "&binlay="+binlay
+			     + "&c_issuetime=" + c_issuetime;
+		searchform.action = page;
+		searchform.submit();
+	}
+</script>

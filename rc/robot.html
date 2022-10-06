@@ -1,0 +1,705 @@
+<!doctype html>
+<html>
+<head>
+	<title>济宁市网上政务大厅&nbsp;任城区</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<script type="text/javascript">
+		
+		var __webPath = "/icity/";
+		var __signature = "c943891665057104251";
+		var signupUrl="/icity/uc/register";
+	</script>
+	<link href="static/css/custom.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="static/js/a.js"></script>
+	<script type="text/javascript" src="static/js/common.js"></script>
+	<script type="text/javascript" src="static/js/laypage.js"></script>
+	<script type="text/javascript" src="static/js/jquery.qrcode.min.js"></script>
+	<script type="text/javascript" src="static/js/holder.js"></script>
+	<script type="text/javascript" src="static/js/jquery.jqpagination.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/jqpagination.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="/icity/public/assets/js/html5.min.js"></script>
+		<script src="/icity/public/assets/js/respond.min.js"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		plugin.add('dialog', {
+			path: '/icity/public/scripts/dialog/a?t=js&m=jquery.artDialog.js,plugins/iframeTools.js',
+			type: 'js',
+			charset: 'utf-8',
+			rely: ['dialog_css']
+		});
+		plugin.add('dialog_css', {
+			path: '/icity/public/scripts/dialog/skins/simple.css',
+			type: 'css',
+			charset: 'utf-8'
+		});
+		plugin.add('tree', {
+			path: '/icity/public/scripts/zTreeStyle/jquery.ztree.js',
+			type: 'js',
+			charset: 'utf-8',
+			rely: ['tree_css']
+		});
+		plugin.add('tree_css', {
+			path: '/icity/public/scripts/zTreeStyle/zTreeStyle.css',
+			type: 'css',
+			charset: 'utf-8'
+		});
+		plugin.add('calendar', {
+			path: '/icity/public/scripts/calendar/calendar-min.js',
+			type: 'js',
+			charset: 'utf-8',
+			rely: ['calendar_css']
+		});
+		plugin.add('calendar_css', {
+			path: '/icity/public/scripts/calendar/calendar-min.css',
+			type: 'css',
+			charset: 'utf-8'
+		});
+	</script>
+</head>
+<body>
+ <link href="static/css/index4.css" rel="stylesheet" type="text/css">
+<script src="static/js/jquery_002.js"></script>
+<script src="static/js/jquery_003.js"></script>
+<script src="static/js/jquery_004.js"></script>
+<script src="static/js/jquery_005.js"></script>
+<script src="static/js/home.js"></script>
+<style>
+* {
+	box-sizing: content-box;
+}
+.nav ul li a {
+    color: #111;
+}
+</style>
+<!--head-->
+ <script src="static/js/wonders.log.min.js"></script> 
+<script>
+var publicEncryptStr = "";//加密后的办件信息
+var userIdMap = "";//统一身份认证uuid
+$(function() {
+  //调用 wondersLog 时先做判空，避免js加载失败后，导致页面崩溃的情况  eventTracking
+  if (typeof wondersLog != "undefined") {
+	debugger;
+	 // 山东一网通办统一token，不可修改
+        var token = 'sdywtb';
+        wondersLog.init(token);
+        
+            //do nothing
+    	   
+  }
+});
+//获取uuid
+function getUuidByUid(uid){
+	 var cmd = new LEx.Command("app.uc.UserCmd");
+     cmd.setParameter("uid", "");
+     ret = cmd.execute("getMapAndUserInfo");
+     userIdMap =  ret.data[0].USER_ID_MAP;
+     return ret.data[0].USER_ID_MAP;
+}
+//申报外链
+function linkOutApply(linkOutUrl,deptName,itemName){
+	if (typeof wondersLog != "undefined") {
+		if(linkOutUrl)
+			linkOutUrl = linkOutUrl.substring(linkOutUrl.indexOf("//")+2)
+        // TODO: 触发外站链接访问事件
+        wondersLog.track_event('外站链接访问', {targetId: linkOutUrl, targetName: deptName+'-'+itemName});
+    }
+}
+
+
+//申报行为采集
+function recordApply(state){
+	if(""==publicEncryptStr||publicEncryptStr=="undefined"){
+		publicEncryptStr = getpublicEncryptStr();
+	}
+	
+	if("start"==state){
+		  wondersLog.track_event('开始记录办件', {encrypted: true, info: publicEncryptStr});
+	        // TODO: 在办事开始时（通常为办事页面打开后）, 申明耗时类事件："采集办件信息"
+	      wondersLog.time_event('采集办件信息');
+	}else if("end"==state){
+		 wondersLog.track_event('采集办件信息', {encrypted: true, info: publicEncryptStr});
+	}
+	
+}
+//获取办件加密信息
+function getpublicEncryptStr(){
+	
+	if(""==userIdMap||userIdMap=="undefined"){
+		 userIdMap = getUuidByUid( "");
+	}
+	
+	var cmd = new LEx.Command("sd.app.pmi.hits.AESUtil");
+    cmd.setParameter("itemCode", "");
+    cmd.setParameter("itemName", "");
+    cmd.setParameter("deptName", "");
+    cmd.setParameter("userId", userIdMap);
+    cmd.setParameter("userType", 1);
+    cmd.setParameter("projectTarget", "");
+    cmd.setParameter("licenseNo", "");
+    if(postData.objectType=="3"){
+    	 cmd.setParameter("mobile", $("#contactPhone").val());
+    }else{
+    	 cmd.setParameter("mobile",   $("#linkPhone").val());
+    }
+    ret = cmd.execute("getAESEncrypt");
+    publicEncryptStr = ret.data;
+    return publicEncryptStr;
+}
+</script>
+<div class="header">
+	<div class="head-cont">
+		<div class="head-top">
+			<!--logo-->
+			<div class="head-left">
+				<div class="logo"><img src="static/picture/head-logo.png"></div>
+				<div class="site" id="zd" style="
+    margin-left: 15px;
+    font-size: 13px;
+    padding: 5px 15px;
+    height: 20px;
+    line-height: 20px;
+    color: #666;
+    background: #f0f0f0;
+    cursor: pointer;
+    margin-top: 40px;
+"><span>任城区</span><img src="static/picture/head-sit.png"></div>
+			</div>
+			<!--you-->
+			<div class="head-right">
+			<a href="#">任城区政府门户网站</a>|
+			
+				<a href="javascript:void(0);" onclick="doLogin();"><div class="login">登录</div></a>|
+				<a href="javascript:void(0);" onclick="doLogin();"><div class="enrol">注册</div></a>
+			
+			</div>
+		</div>
+		<!--nav-->
+		<div class="nav" style="
+    width: 1100px;
+    margin-top: 8px;
+    position: absolute;
+">
+			<ul>
+				<li class="checked navigation p1"><a href="dhz3ef1c8b.html" style="padding: 10px 0px;"> 首页</a></li>
+				<li class="navigation p2"><a href="personal8.html" style="padding: 10px 0px;">个人办事</a> </li>
+				<li class="navigation p3"><a href="legal8.html" style="padding: 10px 0px;">法人办事</a></li> 
+				<li class="navigation p4"> <a href="6oc77swi7y.html" style="padding: 10px 0px;">结果公示</a></li> 
+				<li class="navigation p5"><a href="i3a2njyfqt.html" style="padding: 10px 0px;">权力清单</a> </li>
+ 
+				<li class="navigation p7" style="display:none;"> <a href="#" style="padding: 10px 0px;">中介超市</a></li>   
+				<li class="navigation p8" style="display:none;"> <a href="#" style="padding: 10px 0px;">公共资源交易中心</a></li>    
+			</ul>
+			<div class="header-search">
+				<input class="header-search-input key" type="text" name="keyword">
+				<button type="" class="header-search-submit"><img src="static/picture/head-search.png" onclick="searchX();"></button>
+			</div> 
+		</div>
+		<!--站点切换-->
+		<style>
+  .site-mian190618{
+	font-size:14px;
+	width:1100px;
+	margin:0 auto;
+	position: absolute;
+    top: 70px;
+    z-index: 20;
+	background-color: rgba(255,255,255,1);
+	display:none;
+	box-shadow: 0px 0px 15px rgba(150, 150, 150, .5);
+	min-height: 250px;
+	padding: 25px
+  }
+.site-mian190618 a{ color:#333}	
+.site-mian190618 .site-m-c{
+	width: 100%
+	padding: 15px 0px;
+}
+.site-mian190618 .site-m-c .site-info190618{
+	min-height: 70px;
+	margin-bottom: 20px;
+	}
+	.site-mian190618 .site-info190618 .site-info-b190618{
+	font-size:16px;
+	font-weight:bolder;
+	margin-left: 10px;
+	text-align: left;
+	color: #333;
+	}
+	.site-mian190618 .site-info-n190618 ul li {
+	width: 130px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	margin: 10px;
+	background: #f6f6f6;
+	float: left;
+	overflow:hidden; 
+    text-overflow:ellipsis; 
+	white-space:nowrap;
+	cursor: pointer;
+	}
+	.site-mian190618 .site-info-n190618 ul li a{
+	height: 32px;
+	line-height: 32px;
+}	
+.site-mian190618 .site-info-n190618 ul li:hover{
+	background: #eee;
+	}
+</style>
+<!--站点切换-->
+<div class="site-mian190618" id="zd-min">
+	<div class="site-m-c">
+		<div class="site-info190618">
+			<div class="site-info-b190618">区</div>
+			<div class="site-info-n190618">
+			  <ul>
+				<li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/icity/');">任城区</a></li>
+			  </ul>
+			</div>
+		</div>
+		<div class=" site-info190618">
+			<div class="site-info-b190618">街道</div>
+			<div class="site-info-n190618">
+				<ul>
+				 <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilsq/');">李营街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilzq/');">长沟镇</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyihdq/');">唐口街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyiynx/');">安居街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyitcx/');">南苑街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyiysx/');">观音阁街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyillx/');">越河街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyifx/');">阜桥街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyipyx/');">济阳街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyijnx/');">古槐街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyimyx/');">二十里铺街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilsx/');">金城街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyigxkfq/');">仙营街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyimsdjq/');">南张街道</a></li>
+				  <li><a href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/linyilgkfq/');">喻屯镇</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="site-info" style="display:none;">
+			<div class="site-info-b">乡镇社区</div>
+			<div class="site-info-n"><a href="#">富锦市</a> <a href="#">同江市</a> <a href="#">桦南县</a></div>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	$("#zd").find("span").html("任城区");
+});
+</script>   
+	</div>
+</div>
+<script>
+//登录注册注销相关
+function doLogin(ucPath,loginType) {	
+  var redirectTo=LEx.webPath+"login?goto="+encodeURIComponent(window.location.href);
+	window.location.href = redirectTo;
+  return false;
+}
+function doLogout(ucPath) {
+	var logout_url=null;	 
+		logout_url = LEx.webPath+"logout?goto="+encodeURIComponent(window.location.href);
+	window.location.href = logout_url;
+  return false;
+}
+
+function searchX(){
+	 var key=$(".key").val();
+	
+	 if(!LEx.isNotNull(key)){
+		 alert("请输入要查询的内容~");
+		 return false;
+	 }
+	 window.open("/icity/jrobot/search?key="+ encodeURIComponent(key));
+}
+</script>
+	<link href="static/css/head.css" rel="stylesheet" type="text/css">
+<style>
+.its-robot .media-body {
+	overflow: initial;
+}
+</style>
+<div class="container" style="width: 1100px !important;"> 
+        <div class="row">
+            <div class="col-xs-7">
+                <section class="panel no-bordered its-robot">
+                    <ul id="displaybox" class="panel-body media-list" style="height: 230px; overflow-y: scroll; background-color: #fbfdfd;">
+                        <li class="media">
+                            <a class="pull-left" href="#">
+                                <img class="media-object" src="static/picture/robot.jpg">
+                            </a>
+                            <div class="media-body">
+                                <div class="bubble bg-default inline-block">
+                                    您好！我是“<span class="text-warning">济宁市网上政务大厅</span>”智能机器人，您想了解什么？请告诉我，希望我的答复能够让您满意。 
+                                </div>
+                            </div>
+                        </li>                        
+                    </ul>
+                    <div style="border-top: 1px solid #79D3F8;">
+                        <textarea class="form-control no-bordered transparent" id="inputbox" rows="3" placeholder="请输入您要问的问题"></textarea>
+                        <div class="text-right" style="padding: 5px;">
+                            <span class="pull-left">您还可以输入<i style="font-family: Constantia,Georgia; font-size: 22px; color:rgb(0, 66, 118);" id="tnum">40</i>个字</span>
+                            <span class="text-muted" style="padding-right: 15px;">支持Enter快捷键发送</span>
+                            <button class="btn btn-warning" type="button" onclick="submit();">&nbsp;&nbsp;&nbsp;发送&nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-xs-4 text-right">
+                <img src="static/picture/gaigai.jpg">
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function(){
+    	$("#inputbox").keydown(function(){
+    		var curLength=$(this).val().length; 
+    		if(curLength>40){ 
+    			var num=$(this).val().substr(0,39); 
+    			$(this).val(num);
+    		}else{ 
+    			$("#tnum").text(40-$(this).val().length); 
+    		}
+    	});
+    });
+   	
+    function submit(){
+    	
+    	var strInput = $("#inputbox").val();
+    	
+    	$("#inputbox").val("");
+    	if(!LEx.isNotNull(strInput)){
+    		return;
+    	}
+    	var d = new Array();
+    	for (var a=0;a<strInput.length;a++ ){
+    		var trans = strInput.charCodeAt(a);
+    		d.push(trans);
+    		var Retrans = String.fromCharCode(trans);
+    		
+    	}
+    	var strUl = "";//$("ul[class='media-list yi-media-list-m2']").html();
+    	var dt = new Date();
+    	dt = dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+    	strUl+="<li class=\"media\"><a class=\"pull-right\" href=\"#\">"
+        		+"<img class=\"media-object\" src=\"/icity/project/jining_rencheng_wb_v1/default/public/assets/img/user.png\">"
+	    		+"</a>"
+	    		+"<div class=\"media-body text-right\">"
+        		+"<div class=\"bubble bg-primary inline-block\">"
+        	    +"<xmp>"+strInput+"</xmp>"
+        		+"</div></div></li>";
+        
+        strUl+="<li class=\"media\">"
+        	  +"<a class=\"pull-left\" href=\"#\">"
+              +"<img class=\"media-object\" src=\"/icity/project/jining_rencheng_wb_v1/default/public/assets/img/robot.jpg\">"
+              +"</a>"
+              +"<div class=\"media-body\">"
+              +"<div class=\"bubble bg-default inline-block\">"
+              +searchReply(strInput)
+        	  +"</div></div></li>"; 
+        $("ul[class='panel-body media-list']").append(strUl);    
+    	var obj = document.getElementById("displaybox");
+        obj.scrollTop= obj.scrollHeight;
+        $("#inputbox").focus();
+        $("#tnum").text("40");
+    }
+    function searchReply(key){
+    	var command = new LEx.Command("app.icity.search.SearchCmd");
+    	command.setParameter("key", key);
+    	command.setParameter("limit", "10");
+    	var ret = command.execute("getIndex");
+    	var str="您查找的“<font style=\"color: #e56100;\">"+key+"</font>”，我为您找到以下内容：<br/>";
+    	if(!command.error){
+    		if(ret.total>0){
+    			var len = ret.data.length;
+    			for(var i=0;i<len;i++){
+    				 if("project" == ret.data[i].TYPE){
+    				 	if(ret.data[i].NAME){
+    				 		if(ret.data[i].POWER_TYPE=="BM"){
+    				 			str+="<h5>【"+formatStateBm(ret.data[i].SUB_TYPE)+"】<a href=\"javascript:void(0)\" onclick=\"gotoDetail('"+ret.data[i].SUB_TYPE+"','"+ret.data[i].ID+"')\" target=\"_blank\">"+ret.data[i].NAME+"</a></h5>";
+    				 		}
+    				 		else{
+           					 str+="<h5>【事项】<a href=\"/icity/icity/project/proinfo?id="+ret.data[i].ID+"\" target=\"_blank\">"+ret.data[i].NAME+"</a></h5>";
+    				 		}
+    				 	}else{
+                   			//str+="<h5>【主题："+ret.data[i].TITLE_NAME+"】<a href=\"/icity/approve/guide?id="+ret.data[i].ID+"\" target=\"_blank\">"+ret.data[i].NAME+"</a></h5>";
+    				 	}
+    				 }else if("content" == ret.data[i].TYPE){
+    					 str+="<h5>【网站发布】<a href=\"/icity/govservice/detailcontent?id="+ret.data[i].ID+"\" target=\"_blank\">"+ret.data[i].NAME+"</a></h5>";
+    				 }else if("consult" == ret.data[i].TYPE){
+    					 str+="<h5>【咨询信息】<a href=\"/icity/icity/consultInfo?id="+ret.data[i].ID+"\" target=\"_blank\">"+ret.data[i].NAME+"</a></h5>";
+    				 }else{
+    					 str+="<h5><a>"+ret.data[i].NAME+"</a></h5>";
+    				 }
+    			}
+    		}else{
+    			str="对不起，没有找到答案，我将会收录您的问题，建议您换个说法重新提问。";
+    		}
+    	}else{
+    		str="对不起，没有找到答案，我将会收录您的问题，建议您换个说法重新提问。";   
+    	}
+    	return str;
+    }
+    function formatStateBm(type){
+    	var val="其他";
+    	switch(type){
+    		case '1':
+    			val="办事指南";
+    			break;
+    		case '3':
+    			val="通知公告";
+    			break;
+    		case 'cj':
+    			val="常见问题";
+    			break;
+    		case 'fw':
+    			val="服务链接";
+    			break;
+    		case 'pt':
+    			val="普通信息";
+    			break;
+    		case '5':
+    			val="单位名录";
+    			break;
+    		case '6':
+    			val="场馆信息";
+    			break;
+    		case '7':
+    			val="政策文件";
+    			break;
+    	}	
+    	return val;
+    }
+    function gotoDetail(type,id){
+    	var val="";
+    	switch(type){
+    		case '1':
+    			val="/icity/icity/bmservice/servicedetail?id="+id;
+    			//val="办事指南类";
+    			break;
+    		case '3':
+    			val="/icity/icity/bmservice/infodetail?id="+id;
+    			//val="通知公告类";
+    			break;
+    		case 'cj':
+    			val="/icity/icity/bmservice/prodetail?id="+id;
+    			//val="常见问题类";
+    			break;
+    		case 'fw':
+    			val="/icity/icity/bmservice/conveniencedetail?id="+id;
+    			//val="服务链接类";
+    			break;
+    		case 'pt':
+    			val="/icity/icity/bmservice/infodetail?id="+id;
+    			//val="普通信息类";
+    			break;
+    		case '5':
+    			val="/icity/icity/bmservice/ditudetail?id="+id;
+    			//val="单位名录类";
+    			break;
+    		case '6':
+    			val="/icity/icity/bmservice/ditudetail?id="+id;
+    			//val="场馆信息类";
+    			break;
+    		case '7':
+    			val="/icity/icity/bmservice/lawdetail?id="+id;
+    			//val="政策文件类";
+    			break;
+    	}
+    	//window.location.href = val;
+    	window.open(val,"_blank");
+
+    }
+    //给过长文字添加换行符
+    /*function toBreakWord(strContent){
+    	var intLen = 70;
+        var strTemp="";
+        while(strContent.length>intLen){
+             strTemp+=strContent.substr(0,intLen)+"&#10;"; 
+             strContent=strContent.substr(intLen,strContent.length); 
+        }
+        strTemp+="&#10;"+strContent;
+        return strTemp;
+    }*/
+
+    function errorDialog(t, c) {
+    	LEx.dialog({
+    		title : t,
+    		content : c,
+    		icon : 'error',
+    		lock : true
+    	});
+    }
+    document.onkeydown=function(event){
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if(e && e.keyCode==27){ // 按 Esc 
+            //要做的事情        
+          }
+        if(e && e.keyCode==113){ // 按 F2 
+             //要做的事情
+           }            
+         if(e && e.keyCode==13){ // enter 键
+             //要做的事情
+        	 submit();
+        }
+    }; 
+    </script>
+	
+	
+	
+	<!--漂浮导航-->
+<div class="floatnav">
+	<ul id="f-navul">
+		<li><a class="f-zzdb" href="javascript:window.open('http://zwfw.rencheng.gov.cn:9001/icity/project/jining_rencheng_wb_v1/default/public/assets/data/申报指南.doc');" download="申报指南.doc"><span>申办指南</span></a></li>
+		<li><a class="f-bj" href=""><span>智能问答</span></a></li>
+		<li><a id="zixun" class="f-ask" href="#" target="_self"><span>我要咨询</span></a></li>
+		<li><a id="tucao" class="f-tsjy" href="#"><span>吐槽找茬</span></a></li>
+		<!--<li><a class="f-phone" href="#"><span>App</span></a></li>-->
+		<li><a class="f-phone" href="#"><span>公众号</span></a></li>
+		<li><a id="sszx" class="f-wyjc" href="#"><span>实时咨询</span></a></li>
+		<li><a class="f-top" href="javascript:window.scrollTo(0,0)"><span>返回顶部</span></a>
+		</li>
+	</ul>
+	<div class="nav-sq" id="sq">收起</div>
+	<div class="f-ydd">
+		<i class="arrow"></i>
+		<div class="f-ewm">
+			<div class="android"><img style="width:160px;height:150px" src="static/picture/weixin.png"><div>微信公众号</div>
+			</div>
+		</div>
+	</div>
+	<div class="f-ytc">
+		<i class="arrow"></i>
+		<div class="f-ewm">
+			<div class="android"><img style="width:160px;height:150px" src="static/picture/tucao.png"><div>吐槽找茬</div>
+			</div>
+		</div>
+	</div>
+	<div class="f-yzx" style="width: 240px;height: 80px;margin-right: 50px;">
+		<i class="arrow"></i>
+<!--		<div class="f-ewm" style="padding-top:20px;">-->
+<!--			<div class="android">-->
+<!--				<div>业务咨询电话：15725373655</div>-->
+<!--				<div>技术服务电话：0537-5660868</div>-->
+<!--			</div>-->
+<!--		</div>-->
+		<img src="static/picture/wyzx.jpg">
+	</div>
+	<div class="f-sszx" style="
+	width: 140px;
+	height: 180px;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	right: 140px;
+    top: 280px;display:none;">
+		<i class="arrow"></i>
+<!--		<div class="f-ewm" style="padding-top:20px;">-->
+
+<!--			<div class="android">-->
+<!--				<div onclick="openQQ('957837297')"><img src="/icity/project/jining_rencheng_wb_v1/default/public/assets/img/bm-14.png"/>957837297</div>-->
+<!--				<div onclick="openQQ('1138265365')"><img src="/icity/project/jining_rencheng_wb_v1/default/public/assets/img/bm-14.png"/>1138265365</div>-->
+<!--			</div>-->
+<!--		</div>-->
+		<a onclick="openQQ('3084808593')">
+			<img src="static/picture/sszx.png">
+		</a>
+
+	</div>
+	<script>
+		function openQQ(m_qq) {
+
+			window.open('tencent://message/?Menu=yes&uin='+m_qq+'&Site=', '_self');
+		}
+	</script>
+</div>
+<!--footer-->
+<div class="footer" style="display: inline-block;width:100%;">
+	<div class="footer-con">
+		<div class="footer-left"><a target="_blank" href="javascript:window.open('http://www.gov.cn/c125533/jbxxk.htm');" style="margin-right:20px;"><img src="static/picture/footer-1.png"></a>
+		</div>
+		<div class="footer-midle">
+			<div class="footer-l-list">
+				<div class="f-list-n">中共济宁市任城区委、济宁市任城区人民政府版权所有 </div>   <div class="f-split1"></div>
+				<div class="f-list-n">济宁市任城区电子政务管理办公室承建</div>   <div class="f-split1"></div>
+				<!--<div class="f-list-n">任城区行政审批服务局承办</div> <div class="f-split1"></div>-->
+				<div class="f-list-n"> 鲁ICP备05022544号</div>
+			</div>
+			<div class="footer-l-text">
+				<span>网站标识码：3708110001 </span>
+				<span>鲁公网安备37081102000009号</span>
+				<span>区长公开电话:6500000</span>
+				<span><a href="#">网站地图</a></span>
+				
+				
+				<span>技术咨询电话：0537-5660868</span>
+				
+				
+
+			</div>
+		</div>
+		<div class="footer-right">
+			<a target="_blank" href="javascript:window.open('http://bszs.conac.cn/sitename?method=show&id=5404D5F141FC4E0EE053022819AC047D');"><img src="static/picture/footer-2.png"></a>
+		</div>
+	</div>
+</div>
+<script>
+	function gotodh(){
+		//获取票据
+		var userType = "";
+		var ticket="";
+		var appmark = "jiningsp";
+		var isLoginnew = "1";
+		
+		//do nothing
+		
+	}
+	$("#tucao").hover(
+			function() {
+				$(".f-ytc").show();
+			}, function() {
+				$(".f-ytc").hide();
+			}
+	);
+	$("#zixun").hover(
+			function() {
+				$(".f-yzx").show();
+			}, function() {
+				$(".f-yzx").hide();
+			}
+	);
+	$("#sszx").hover(
+			function() {
+				$(".f-sszx").show();
+			}, function() {
+				$(".f-sszx").hover(function(){
+					$(".f-sszx").show();
+				},function(){
+					$(".f-sszx").hide();
+				});
+			}
+	);
+</script>
+</body>
+
+	
+<script type="text/javascript">
+jQuery(document).ready(function(e) {
+	jQuery.ajaxSetup({
+		cache: false
+	});
+	if(typeof init == "function"){
+		init();
+	}
+});
+</script>
+</html>
+
+		
