@@ -1,6 +1,0 @@
-.btn-z {display: inline-block;width:38px;height: 90px;}/*新*/
-.btnl {background: url(../image/ar-left.png)  no-repeat center;margin: 0px 9px 20px 8px; cursor:pointer;}/*新*/
-.btnr {background: url(../image/ar-right.png) no-repeat center;right: 15px;margin: 0px 9px 20px 8px; cursor:pointer;}/*新*/
-.conbox {position: relative;overflow: hidden; width:1080px; margin:0 auto; padding-top:18px;display: inline-block;}/*新*/
-.conbox ul {position: relative;list-style: none;}
-.conbox ul li {float: left;width: 200px;height: 250px;margin-right:15px;overflow: hidden; cursor:pointer;}
